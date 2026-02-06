@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about WANDER STATE functional sparkling teas. Learn about our mushrooms, ingredients, shipping, and more.">
+  <title>FAQ | WANDER STATE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="docs/assets/Brand Assets/Logos/Wander State/png/WS_Icon.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drinkwanderstate.com/faq.html">
+  <meta property="og:title" content="FAQ | WANDER STATE">
+  <meta property="og:description" content="Frequently asked questions about WANDER STATE functional sparkling teas.">
+  <meta property="og:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQ | WANDER STATE">
+  <meta name="twitter:description" content="Frequently asked questions about WANDER STATE functional sparkling teas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="olipop_meets_lacroix_styleguide.css">
+  <style>
+    body {
+      background: var(--color-cream);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sticky Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding-left: var(--container-padding-mobile);
+      padding-right: var(--container-padding-mobile);
+    }
+
+    @media (min-width: 768px) {
+      .main-nav {
+        padding-left: var(--container-padding-desktop);
+        padding-right: var(--container-padding-desktop);
+      }
+    }
+
+    .nav-logo { height: 60px; width: auto; }
+    @media (min-width: 768px) { .nav-logo { height: 80px; } }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    @media (min-width: 1024px) { .nav-menu { display: flex; } }
+
+    .nav-menu > li { position: relative; margin: 0; }
+    .nav-menu > li > a {
+      font-family: var(--font-family-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      display: block;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+      background: none;
+      border: none;
+    }
+    @media (min-width: 1024px) { .mobile-menu-toggle { display: none; } }
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-primary-forest);
+      border-radius: 2px;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: var(--color-primary-forest);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .page-title {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .page-subtitle {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) { .page-title { font-size: 3.5rem; } }
+
+    /* Section */
+    .section { padding: 5rem 0; }
+    .section-light { background: var(--color-cream); }
+    .section-white { background: white; }
+
+    /* FAQ Styles */
+    .faq-category {
+      margin-bottom: 3rem;
+    }
+    .faq-category:last-child {
+      margin-bottom: 0;
+    }
+    .faq-category-title {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 1.75rem;
+      color: var(--color-primary-forest);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--color-secondary-mint);
+    }
+    @media (min-width: 768px) {
+      .faq-category-title { font-size: 2rem; }
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-lg);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 2rem;
+      text-align: left;
+      font-family: var(--font-family-primary);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: background-color var(--transition-base);
+    }
+    .faq-question:hover {
+      background-color: var(--color-cream);
+    }
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--color-secondary-coral);
+      flex-shrink: 0;
+      transition: transform var(--transition-base);
+    }
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+    .faq-answer-content {
+      padding: 0 2rem 1.5rem;
+      color: var(--color-dark-gray);
+      line-height: 1.8;
+    }
+    .faq-answer-content p {
+      margin-bottom: 1rem;
+    }
+    .faq-answer-content p:last-child {
+      margin-bottom: 0;
+    }
+    .faq-answer-content ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    .faq-answer-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* CTA Section */
+    .cta-box {
+      background: var(--color-primary-forest);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .cta-box h3 {
+      color: white;
+      font-family: 'Thirsty Rough', serif;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .cta-box p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-primary-forest);
+      color: var(--color-cream);
+      padding: var(--space-4xl) 0 var(--space-xl);
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="nav-logo-container">
+        <a href="index.html">
+          <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="beverages.html">Our Products</a></li>
+        <li><a href="mushroom-science.html">Learn</a></li>
+        <li><a href="where-we-wander.html">Community</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" onclick="window.location.href='index.html'" aria-label="Home">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Frequently Asked Questions</h1>
+      <p class="page-subtitle">Everything you need to know about Wander State, our ingredients, and how to get the most from your teas.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="section section-light">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- About Our Products -->
+      <div class="faq-category">
+        <h2 class="faq-category-title">About Our Products</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">What exactly is Wander State?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Wander State is a line of functional sparkling teas crafted with real tea, botanicals, pure maple water, and a blend of three adaptogenic mushrooms: Lion's Mane, Reishi, and Cordyceps.</p>
+              <p>We created Wander State for people who want to feel good without the jitters, crashes, or artificial ingredients found in most energy drinks and sodas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What flavors do you offer?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>We offer four unique flavors, each designed for different moments:</p>
+              <ul>
+                <li><strong>Lemon & Mint</strong> — Crisp and energizing, perfect for morning clarity</li>
+                <li><strong>Chamomile & Blackberry</strong> — Soothing and calming, ideal for evening relaxation</li>
+                <li><strong>Yuzu & Cucumber</strong> — Refreshing and light, great for movement and endurance</li>
+                <li><strong>Hibiscus & Blood Orange</strong> — Vibrant and festive, made for social moments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How much sugar is in each can?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Zero added sugar. Our teas are naturally sweetened with pure maple water, which provides a subtle, clean sweetness without the blood sugar spike. Each can has approximately 4-6 grams of naturally occurring sugars from the maple water and fruit essences.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Are your products organic?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes. All our teas and botanicals are certified organic. Our mushroom extracts are grown using organic practices at Monterey Nutra's facilities in California. The maple water comes from sustainably managed forests in the Northeast.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How many calories per can?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Each 12oz can contains approximately 20-30 calories, depending on the flavor. This makes Wander State a light, refreshing alternative to sodas, juices, and traditional energy drinks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Mushrooms -->
+      <div class="faq-category">
+        <h2 class="faq-category-title">About Functional Mushrooms</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">Will these mushrooms make me feel "high"?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>No. Lion's Mane, Reishi, and Cordyceps are adaptogenic mushrooms — not psychoactive ones. They've been used for centuries in traditional medicine to support focus, calm, and energy. You won't experience any altered mental state, just a gentle, sustained sense of well-being.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What do the mushrooms actually do?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Each mushroom in our blend serves a specific purpose:</p>
+              <ul>
+                <li><strong>Lion's Mane</strong> — Supports cognitive function, memory, and mental clarity</li>
+                <li><strong>Reishi</strong> — Known as the "mushroom of immortality," supports stress relief and immune function</li>
+                <li><strong>Cordyceps</strong> — Traditionally used to support energy, endurance, and athletic performance</li>
+              </ul>
+              <p>Together, they create a balanced, full-spectrum blend that supports both mind and body.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Where do your mushrooms come from?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>All our mushrooms are grown and processed by Monterey Nutra in Watsonville, California. They use a dual-extraction process (hot water + alcohol) to capture both water-soluble and fat-soluble compounds, resulting in a more complete, bioavailable extract.</p>
+              <p>Every batch is third-party tested for purity, potency, and contaminants. We publish Certificates of Analysis for full transparency.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How much mushroom extract is in each can?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Each can contains our proprietary blend of Lion's Mane, Reishi, and Cordyceps — full-spectrum mushrooms grown and tested in the U.S.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can I drink Wander State every day?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes. Adaptogenic mushrooms are generally considered safe for daily consumption. In fact, many of the benefits (like improved focus and reduced stress) become more noticeable with consistent use over time.</p>
+              <p>As with any supplement, if you're pregnant, nursing, or taking medications, we recommend consulting your healthcare provider first.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shipping & Orders -->
+      <div class="faq-category">
+        <h2 class="faq-category-title">Shipping & Orders</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">Where do you ship?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>We currently ship to all 50 U.S. states. International shipping is not available at this time, but we're working on it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How much does shipping cost?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p><strong>Orders $50+:</strong> Free standard shipping</p>
+              <p><strong>Orders under $50:</strong> Flat rate $5.99</p>
+              <p>Standard shipping typically takes 5-8 business days after processing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What's your return policy?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>We offer a 30-day satisfaction guarantee. If you're not happy with your order for any reason — damaged shipment, quality issue, or you just didn't love it — contact us and we'll make it right with a replacement or refund. No fine print.</p>
+              <p>Email us at <strong>info@drinkwanderstate.com</strong> with your order number and we'll respond within 1-2 business days.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">When will my order ship?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Orders are processed within 1-3 business days (Monday-Friday, excluding holidays). Once shipped, you'll receive a confirmation email with tracking information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dietary & Allergens -->
+      <div class="faq-category">
+        <h2 class="faq-category-title">Dietary & Allergens</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">Is Wander State vegan?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes. All Wander State products are 100% plant-based and vegan-friendly.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Is it gluten-free?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes. Our teas are naturally gluten-free. Our facility and suppliers follow strict protocols to prevent cross-contamination.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Does it contain caffeine?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Some flavors contain naturally occurring caffeine from real tea:</p>
+              <ul>
+                <li><strong>Lemon & Mint</strong> — Contains green tea (~25-30mg caffeine, about 1/3 of a cup of coffee)</li>
+                <li><strong>Yuzu & Cucumber</strong> — Contains white tea (~15-20mg caffeine)</li>
+                <li><strong>Chamomile & Blackberry</strong> — Caffeine-free (herbal tea base)</li>
+                <li><strong>Hibiscus & Blood Orange</strong> — Caffeine-free (herbal tea base)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Are there any common allergens?</button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Wander State is free from the top 8 allergens (milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, and soy). However, our products are made in facilities that may process other ingredients. If you have severe allergies, please contact us for detailed ingredient and facility information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="cta-box">
+        <h3>Still have questions?</h3>
+        <p>We're here to help. Reach out and we'll get back to you within 24 hours.</p>
+        <a href="contact.html" class="btn btn-outline" style="border-color: white; color: white;">Contact Us</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4 class="footer-section-title">Our Products</h4>
+          <a href="beverages.html" class="footer-link">All Beverages</a>
+          <a href="beverages.html#lemon-mint" class="footer-link">Lemon & Mint</a>
+          <a href="beverages.html#chamomile-blackberry" class="footer-link">Chamomile & Blackberry</a>
+          <a href="beverages.html#yuzu-cucumber" class="footer-link">Yuzu & Cucumber</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Learn</h4>
+          <a href="mushroom-science.html" class="footer-link">Mushroom Science</a>
+          <a href="partners.html" class="footer-link">Our Story</a>
+          <a href="beverages.html#ingredients" class="footer-link">Ingredients</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Community</h4>
+          <a href="where-we-wander.html" class="footer-link">Where We Wander</a>
+          <a href="partners.html" class="footer-link">Partners</a>
+          <a href="faq.html" class="footer-link">FAQ</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Legal</h4>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+          <a href="shipping-returns.html" class="footer-link">Shipping & Returns</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 <span class="brand-name">WANDER STATE</span>. All rights reserved.</p>
+        <p class="mt-xs small">
+          These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+
+        // Close all other items (optional - remove for multi-open)
+        // document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+
+        // Toggle current item
+        faqItem.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact WANDER STATE. Questions about our functional sparkling teas? We'd love to hear from you.">
+  <title>Contact Us | WANDER STATE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="docs/assets/Brand Assets/Logos/Wander State/png/WS_Icon.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drinkwanderstate.com/contact.html">
+  <meta property="og:title" content="Contact Us | WANDER STATE">
+  <meta property="og:description" content="Questions about our functional sparkling teas? We'd love to hear from you.">
+  <meta property="og:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us | WANDER STATE">
+  <meta name="twitter:description" content="Questions about our functional sparkling teas? We'd love to hear from you.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="olipop_meets_lacroix_styleguide.css">
+  <style>
+    body {
+      background: var(--color-cream);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sticky Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding-left: var(--container-padding-mobile);
+      padding-right: var(--container-padding-mobile);
+    }
+
+    @media (min-width: 768px) {
+      .main-nav {
+        padding-left: var(--container-padding-desktop);
+        padding-right: var(--container-padding-desktop);
+      }
+    }
+
+    .nav-logo { height: 60px; width: auto; }
+    @media (min-width: 768px) { .nav-logo { height: 80px; } }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    @media (min-width: 1024px) { .nav-menu { display: flex; } }
+
+    .nav-menu > li { position: relative; margin: 0; }
+    .nav-menu > li > a {
+      font-family: var(--font-family-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      display: block;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+      background: none;
+      border: none;
+    }
+    @media (min-width: 1024px) { .mobile-menu-toggle { display: none; } }
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-primary-forest);
+      border-radius: 2px;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: var(--color-primary-forest);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .page-title {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .page-subtitle {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) { .page-title { font-size: 3.5rem; } }
+
+    /* Section */
+    .section { padding: 5rem 0; }
+    .section-light { background: var(--color-cream); }
+
+    /* Contact Layout */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+
+    /* Contact Info */
+    .contact-info h2 {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 1.75rem;
+      color: var(--color-primary-forest);
+      margin-bottom: 1.5rem;
+    }
+    .contact-info p {
+      color: var(--color-dark-gray);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 1.25rem;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary-forest);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.25rem;
+    }
+    .contact-method-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      margin-bottom: 0.25rem;
+    }
+    .contact-method-content p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    .contact-method-content a {
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-method-content a:hover {
+      color: var(--color-secondary-coral);
+    }
+
+    /* Contact Form */
+    .contact-form-wrapper {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .contact-form-wrapper h2 {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 1.75rem;
+      color: var(--color-primary-forest);
+      margin-bottom: 0.5rem;
+    }
+    .contact-form-wrapper > p {
+      color: var(--color-dark-gray);
+      margin-bottom: 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 500px) {
+      .form-row.two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      margin-bottom: 0.5rem;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      font-family: var(--font-family-primary);
+      font-size: 1rem;
+      color: var(--color-dark-gray);
+      background-color: var(--color-cream);
+      border: 2px solid transparent;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-base);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary-forest);
+      background-color: white;
+    }
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Quick Links */
+    .quick-links {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-light-gray);
+    }
+    .quick-links h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      margin-bottom: 1rem;
+    }
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .quick-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--color-cream);
+      border-radius: var(--radius-md);
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all var(--transition-base);
+    }
+    .quick-link:hover {
+      background: var(--color-primary-forest);
+      color: white;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-primary-forest);
+      color: var(--color-cream);
+      padding: var(--space-4xl) 0 var(--space-xl);
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="nav-logo-container">
+        <a href="index.html">
+          <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="beverages.html">Our Products</a></li>
+        <li><a href="mushroom-science.html">Learn</a></li>
+        <li><a href="where-we-wander.html">Community</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" onclick="window.location.href='index.html'" aria-label="Home">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Get In Touch</h1>
+      <p class="page-subtitle">Questions, feedback, or just want to say hi? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Let's Connect</h2>
+          <p>Whether you have questions about our products, want to share feedback, or are interested in partnering with us, we're here to help. Our team typically responds within 24 hours.</p>
+
+          <div class="contact-method">
+            <div class="contact-icon">
+              <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="contact-method-content">
+              <h3>Email Us</h3>
+              <p><a href="mailto:info@drinkwanderstate.com">info@drinkwanderstate.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">
+              <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div class="contact-method-content">
+              <h3>Response Time</h3>
+              <p>We respond to all inquiries within 1-2 business days.</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">
+              <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="contact-method-content">
+              <h3>Based In</h3>
+              <p>United States</p>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="quick-links">
+            <h3>Quick Links</h3>
+            <div class="quick-links-grid">
+              <a href="faq.html" class="quick-link">
+                <span>?</span> FAQ
+              </a>
+              <a href="shipping-returns.html" class="quick-link">
+                <span>📦</span> Shipping
+              </a>
+              <a href="partners.html" class="quick-link">
+                <span>🤝</span> Partners
+              </a>
+              <a href="mushroom-science.html" class="quick-link">
+                <span>🍄</span> Science
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form below and we'll get back to you soon.</p>
+
+          <form action="https://formsubmit.co/info@drinkwanderstate.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Contact Form Submission - WANDER STATE">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://drinkwanderstate.com/contact.html?sent=true">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What's this about?</label>
+              <select id="subject" name="subject">
+                <option value="General Question">General Question</option>
+                <option value="Order Issue">Order Issue</option>
+                <option value="Product Feedback">Product Feedback</option>
+                <option value="Partnership Inquiry">Partnership Inquiry</option>
+                <option value="Press/Media">Press/Media</option>
+                <option value="Wholesale">Wholesale Inquiry</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell us what's on your mind..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4 class="footer-section-title">Our Products</h4>
+          <a href="beverages.html" class="footer-link">All Beverages</a>
+          <a href="beverages.html#lemon-mint" class="footer-link">Lemon & Mint</a>
+          <a href="beverages.html#chamomile-blackberry" class="footer-link">Chamomile & Blackberry</a>
+          <a href="beverages.html#yuzu-cucumber" class="footer-link">Yuzu & Cucumber</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Learn</h4>
+          <a href="mushroom-science.html" class="footer-link">Mushroom Science</a>
+          <a href="partners.html" class="footer-link">Our Story</a>
+          <a href="beverages.html#ingredients" class="footer-link">Ingredients</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Community</h4>
+          <a href="where-we-wander.html" class="footer-link">Where We Wander</a>
+          <a href="partners.html" class="footer-link">Partners</a>
+          <a href="faq.html" class="footer-link">FAQ</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Legal</h4>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+          <a href="shipping-returns.html" class="footer-link">Shipping & Returns</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 <span class="brand-name">WANDER STATE</span>. All rights reserved.</p>
+        <p class="mt-xs small">
+          These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Check if form was submitted
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('sent') === 'true') {
+        alert('Thanks for reaching out! We\'ll get back to you within 24 hours.');
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    });
+  </script>
+
+</body>
+</html>

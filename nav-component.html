@@ -1,0 +1,91 @@
+<!-- This is a reusable navigation component
+     Copy this into each page's <body> tag as the first element -->
+
+<!-- Sticky Navigation Header -->
+<header class="site-header">
+  <nav class="main-nav">
+    <!-- Logo -->
+    <div class="nav-logo-container">
+      <a href="index.html">
+        <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
+      </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="nav-menu">
+      <li>
+        <a href="#products">Our Products</a>
+        <ul class="dropdown-menu">
+          <li><a href="beverages.html">All Beverages</a></li>
+          <li><a href="beverages.html#lemon-mint">Lemon & Mint</a></li>
+          <li><a href="beverages.html#chamomile-blackberry">Chamomile & Blackberry</a></li>
+          <li><a href="beverages.html#yuzu-cucumber">Yuzu & Cucumber</a></li>
+          <li><a href="beverages.html#hibiscus-orange">Hibiscus & Blood Orange</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="mushroom-science.html">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="mushroom-science.html">Mushroom Science</a></li>
+          <li><a href="mushroom-science.html#why-mushrooms">Health Benefits</a></li>
+          <li><a href="partners.html">Our Story</a></li>
+          <li><a href="beverages.html#ingredients">Ingredients</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="where-we-wander.html">Community</a>
+        <ul class="dropdown-menu">
+          <li><a href="where-we-wander.html">Where We Wander</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="partners.html#outdoor-alliance">Outdoor Alliance</a></li>
+          <li><a href="#" onclick="openModal(); return false;">Join Our Community</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav-backdrop" onclick="toggleMobileMenu()"></div>
+<div class="mobile-nav-overlay">
+  <ul class="mobile-nav-menu">
+    <li>
+      <a href="#products" onclick="toggleMobileDropdown(event, 'products')">Our Products</a>
+      <ul class="mobile-dropdown" id="mobile-products">
+        <li><a href="beverages.html">All Beverages</a></li>
+        <li><a href="beverages.html#lemon-mint">Lemon & Mint</a></li>
+        <li><a href="beverages.html#chamomile-blackberry">Chamomile & Blackberry</a></li>
+        <li><a href="beverages.html#yuzu-cucumber">Yuzu & Cucumber</a></li>
+        <li><a href="beverages.html#hibiscus-orange">Hibiscus & Blood Orange</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="mushroom-science.html" onclick="toggleMobileDropdown(event, 'learn')">Learn</a>
+      <ul class="mobile-dropdown" id="mobile-learn">
+        <li><a href="mushroom-science.html">Mushroom Science</a></li>
+        <li><a href="mushroom-science.html#why-mushrooms">Health Benefits</a></li>
+        <li><a href="partners.html">Our Story</a></li>
+        <li><a href="beverages.html#ingredients">Ingredients</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="where-we-wander.html" onclick="toggleMobileDropdown(event, 'community')">Community</a>
+      <ul class="mobile-dropdown" id="mobile-community">
+        <li><a href="where-we-wander.html">Where We Wander</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="partners.html#outdoor-alliance">Outdoor Alliance</a></li>
+        <li><a href="#" onclick="openModal(); return false;">Join Our Community</a></li>
+      </ul>
+    </li>
+    <li style="margin-top: 2rem;">
+      <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-block">Join Waitlist</a>
+    </li>
+  </ul>
+</div>

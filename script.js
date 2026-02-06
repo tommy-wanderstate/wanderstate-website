@@ -90,42 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ==========================================
-  // FART SCROLL - Random fart sounds on scroll
+  // SCROLL EFFECTS - Parallax on floating elements
   // ==========================================
-  const fartSounds = [
-    'sounds/fart1.wav',
-    'sounds/fart2.wav',
-    'sounds/fart3.wav',
-    'sounds/fart4.wav',
-    'sounds/fart5.wav',
-    'sounds/fart6.wav'
-  ];
-
-  let lastFartTime = 0;
-  const fartCooldown = 300; // Minimum ms between farts
-
-  // Preload all fart sounds
-  const fartAudioElements = fartSounds.map(src => {
-    const audio = new Audio(src);
-    audio.volume = 0.4; // Adjust volume so it's not too obnoxious
-    return audio;
-  });
-
-  function playRandomFart() {
-    const now = Date.now();
-    if (now - lastFartTime < fartCooldown) return;
-
-    // Only fart 20% of the time (1 in 5 scrolls)
-    if (Math.random() > 0.2) return;
-
-    const randomIndex = Math.floor(Math.random() * fartAudioElements.length);
-    const fartAudio = fartAudioElements[randomIndex].cloneNode();
-    fartAudio.volume = 0.3 + (Math.random() * 0.3); // Random volume between 0.3-0.6
-    fartAudio.play().catch(err => console.log('Fart failed to play:', err));
-
-    lastFartTime = now;
-  }
-
   let lastScrollY = window.pageYOffset;
   let ticking = false;
 
@@ -134,10 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!ticking) {
       window.requestAnimationFrame(function() {
-        // Fart scroll
-        playRandomFart();
-
-        // Parallax effect
+        // Parallax effect for floating elements
         const scrolled = lastScrollY;
         const parallaxElements = document.querySelectorAll('.animate-float');
 
@@ -287,6 +250,23 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('%cInterested in joining our team? Email: hello@drinkwanderstate.com', 'font-size: 12px; color: #8B7355;');
 
 });
+
+// ==========================================
+// PRODUCT CARD DETAILS TOGGLE
+// ==========================================
+function toggleProductDetails(button) {
+  const card = button.closest('.product-card-compact');
+  const details = card.querySelector('.product-card-compact__details');
+  const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+  // Toggle state
+  button.setAttribute('aria-expanded', !isExpanded);
+  details.classList.toggle('active');
+
+  // Update button text
+  const toggleText = isExpanded ? 'See Details' : 'Hide Details';
+  button.innerHTML = toggleText + ' <span class="toggle-icon">' + (isExpanded ? '+' : '×') + '</span>';
+}
 
 // ==========================================
 // CSS ADDITIONS FOR ANIMATIONS

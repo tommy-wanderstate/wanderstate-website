@@ -1,0 +1,20 @@
+{
+  "name": "wanderstate-marketing",
+  "version": "1.0.0",
+  "description": "Wander State - Functional Sparkling Teas Marketing Website",
+  "scripts": {
+    "optimize-images": "node build/optimize-images.js",
+    "build": "node build/optimize-images.js",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "wander-state",
+    "functional-beverages",
+    "mushroom-tea",
+    "marketing"
+  ],
+  "author": "Wander State LLC",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {}
+}

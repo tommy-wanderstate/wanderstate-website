@@ -5,467 +5,744 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="WANDER STATE - Functional Sparkling Teas powered by mushrooms and pure maple water. Real ingredients, zero BS.">
   <title>WANDER STATE | Functional Sparkling Teas</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="docs/assets/Brand Assets/Logos/Wander State/png/WS_Icon.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drinkwanderstate.com/">
+  <meta property="og:title" content="WANDER STATE | Functional Sparkling Teas">
+  <meta property="og:description" content="Functional Sparkling Teas powered by mushrooms and pure maple water. Real ingredients, zero BS.">
+  <meta property="og:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WANDER STATE | Functional Sparkling Teas">
+  <meta name="twitter:description" content="Functional Sparkling Teas powered by mushrooms and pure maple water. Real ingredients, zero BS.">
+  <meta name="twitter:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="olipop_meets_lacroix_styleguide.css">
   <style>
     /* ============================================
-       MOBILE-FIRST STYLES
-       Base styles are for mobile, then scale up
+       REDESIGNED STYLES - Astra Sierra Nature Inspired
        ============================================ */
 
-    /* Body - Mobile Background */
     body {
-      background-image: url('docs/assets/Brand Assets/Color Palettes/mountain background png.png');
-      background-size: auto 2000px;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      min-height: 100vh;
+      background: var(--color-cream);
+      margin: 0;
+      padding: 0;
     }
 
-    /* Mobile spacing adjustments */
-    @media (max-width: 767px) {
-      .pt-7xl {
-        padding-top: 2rem !important;
-      }
+    /* ============================================
+       STICKY NAVIGATION WITH DROPDOWNS
+       ============================================ */
 
-      .pb-7xl {
-        padding-bottom: 2rem !important;
-      }
-
-      .pt-5xl {
-        padding-top: 1.5rem !important;
-      }
-
-      .pb-5xl {
-        padding-bottom: 1.5rem !important;
-      }
-
-      .mb-3xl {
-        margin-bottom: 1.5rem !important;
-      }
-
-      .pt-3xl {
-        padding-top: 1.5rem !important;
-      }
-
-      .pb-3xl {
-        padding-bottom: 1.5rem !important;
-      }
-
-      .pt-2xl {
-        padding-top: 1rem !important;
-      }
-
-      .pb-2xl {
-        padding-bottom: 1rem !important;
-      }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
     }
 
-    /* Navigation - Mobile Base */
-    .site-nav {
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 1rem 0;
-      background: linear-gradient(to bottom, #FBF9F5 0%, #FFFFFF 100%);
-      margin-bottom: 0;
-      border-radius: 0;
-      box-shadow: 0 2px 12px rgba(47, 79, 63, 0.04);
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding-left: var(--container-padding-mobile);
+      padding-right: var(--container-padding-mobile);
+    }
+
+    @media (min-width: 768px) {
+      .main-nav {
+        padding-left: var(--container-padding-desktop);
+        padding-right: var(--container-padding-desktop);
+      }
     }
 
     .nav-logo-container {
-      flex: 1;
-    }
-
-    .nav-logo-link {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
+      flex-shrink: 0;
     }
 
     .nav-logo {
-      height: 100px;
+      height: 60px;
       width: auto;
     }
 
-    .nav-tagline {
-      font-family: 'Thirsty Rough', serif;
-      font-size: 1.5rem;
-      color: #2C4161;
-      line-height: 1.2;
+    @media (min-width: 768px) {
+      .nav-logo {
+        height: 80px;
+      }
     }
 
-    /* Hero Section - Mobile Base */
-    .hero-section {
-      background: transparent;
-      padding: 1.5rem 0 2rem;
-      min-height: 0;
-    }
-
-    .hero-container {
-      display: flex;
-      flex-direction: column;
+    /* Desktop Navigation */
+    .nav-menu {
+      display: none;
       align-items: center;
-      gap: 1.5rem;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .hero-text {
-      width: 100%;
-      text-align: center;
+    @media (min-width: 1024px) {
+      .nav-menu {
+        display: flex;
+      }
     }
 
-    .hero-heading {
-      font-family: 'TAY Birdie', cursive;
-      color: #2C4161;
-      line-height: 1.3;
-      margin-bottom: var(--space-lg);
-    }
-
-    .hero-title {
-      font-weight: bold;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.5rem;
-      font-weight: normal;
-    }
-
-    .hero-description {
-      max-width: 100%;
-      text-align: center;
-    }
-
-    /* Hero Image - Mobile Base */
-    .hero-image-container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-image-wrapper {
+    .nav-menu > li {
       position: relative;
-      width: 85%;
-      max-width: 320px;
-      background: transparent;
-      border: none;
-      box-shadow: none;
+      margin: 0;
     }
 
-    .hero-badge-image {
-      width: 100%;
-      height: auto;
+    .nav-menu > li > a {
+      font-family: var(--font-family-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      padding: 0.75rem 0;
       display: block;
-      object-fit: contain;
-      object-position: center center;
-      border: none;
-      background: transparent;
-      box-shadow: none;
+      transition: all var(--transition-base);
+      position: relative;
     }
 
-    /* Hamburger Menu */
-    .hamburger-menu {
+    .nav-menu > li > a::after {
+      content: '';
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color var(--transition-base);
+    }
+
+    .nav-menu > li > a:hover {
+      color: var(--color-secondary-coral);
+    }
+
+    .nav-menu > li > a:hover::after {
+      background-color: var(--color-secondary-coral);
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: -1rem;
+      background: white;
+      min-width: 220px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      padding: 1rem 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all var(--transition-base);
+      list-style: none;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .nav-menu > li:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: var(--color-dark-gray);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all var(--transition-fast);
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--color-cream);
+      color: var(--color-primary-forest);
+      padding-left: 2rem;
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
       display: flex;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
       padding: 10px;
+      background: none;
+      border: none;
       z-index: 1001;
     }
 
-    .hamburger-menu span {
+    @media (min-width: 1024px) {
+      .mobile-menu-toggle {
+        display: none;
+      }
+    }
+
+    .mobile-menu-toggle span {
       width: 25px;
       height: 3px;
-      background-color: #2C4161;
+      background-color: var(--color-primary-forest);
       border-radius: 2px;
       transition: all 0.3s ease;
     }
 
-    .hamburger-menu.active span:nth-child(1) {
+    .mobile-menu-toggle.active span:nth-child(1) {
       transform: rotate(45deg) translate(8px, 8px);
     }
 
-    .hamburger-menu.active span:nth-child(2) {
+    .mobile-menu-toggle.active span:nth-child(2) {
       opacity: 0;
     }
 
-    .hamburger-menu.active span:nth-child(3) {
+    .mobile-menu-toggle.active span:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -7px);
     }
 
     /* Mobile Menu Overlay */
-    .menu-overlay {
+    .mobile-nav-overlay {
       position: fixed;
       top: 0;
       right: -100%;
-      width: 300px;
+      width: 320px;
+      max-width: 85vw;
       height: 100vh;
-      background: linear-gradient(to bottom, #FBF9F5 0%, #FFFFFF 100%);
-      box-shadow: -2px 0 12px rgba(47, 79, 63, 0.15);
+      background: white;
+      box-shadow: -2px 0 20px rgba(0, 0, 0, 0.15);
       transition: right 0.3s ease;
       z-index: 1000;
-      padding: 80px 2rem 2rem;
+      padding: 100px 2rem 2rem;
+      overflow-y: auto;
     }
 
-    .menu-overlay.active {
+    .mobile-nav-overlay.active {
       right: 0;
     }
 
-    .menu-overlay nav {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    .mobile-nav-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .menu-overlay a {
-      color: #2C4161;
-      text-decoration: none;
+    .mobile-nav-menu > li {
+      margin-bottom: 1rem;
+    }
+
+    .mobile-nav-menu > li > a {
       font-size: 1.25rem;
-      font-weight: 400;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(44, 65, 97, 0.1);
-      transition: color 0.2s ease;
-    }
-
-    .menu-overlay a:hover {
+      font-weight: 600;
       color: var(--color-primary-forest);
+      text-decoration: none;
+      display: block;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-light-gray);
     }
 
-    .menu-backdrop {
+    .mobile-dropdown {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      list-style: none;
+      display: none;
+    }
+
+    .mobile-dropdown.active {
+      display: block;
+    }
+
+    .mobile-dropdown a {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--color-dark-gray);
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav-backdrop {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.4);
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
       z-index: 999;
     }
 
-    .menu-backdrop.active {
+    .mobile-nav-backdrop.active {
       opacity: 1;
       visibility: visible;
     }
 
     /* ============================================
-       TABLET & DESKTOP STYLES
-       Scale up from mobile base
+       FULL-SCREEN PARALLAX HERO
        ============================================ */
 
+    .parallax-hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 900px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .parallax-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background-image: url('docs/assets/Brand Assets/Color Palettes/mountain background png.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      will-change: transform;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+      z-index: 1;
+    }
+
+    .hero-content-center {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-brand-large {
+      font-family: 'TAY Birdie', cursive;
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+      font-weight: normal;
+    }
+
     @media (min-width: 768px) {
-      /* Background - Desktop uses cover with fixed attachment */
-      body {
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-      }
-
-      /* Navigation - Desktop */
-      .site-nav {
-        padding: 1.5rem 0;
-        margin-bottom: 0.75rem;
-        border-radius: 0 0 16px 16px;
-      }
-
-      .nav-logo {
-        height: 160px;
-      }
-
-      .nav-tagline {
-        font-size: 1.5rem;
-      }
-
-      /* Hero Section - Desktop */
-      .hero-section {
-        padding: 3rem 0;
-        min-height: 600px;
-      }
-
-      .hero-container {
-        flex-direction: row;
-        gap: var(--space-3xl);
-        align-items: center;
-      }
-
-      /* Hero Content Wrapper - Desktop: Side by Side */
-      .hero-content-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 3rem;
-        justify-content: center;
-      }
-
-      .hero-text-block {
-        flex: 0 0 auto;
-        text-align: left;
-      }
-
-      .hero-text-block .hero-heading {
-        text-align: left;
-      }
-
-      .hero-text {
-        flex: 0 0 40%;
-        max-width: 40%;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 2rem;
-      }
-
-      /* Hero Image - Desktop */
-      .hero-image-container {
-        flex: 0 0 55%;
-        max-width: 55%;
-      }
-
-      .hero-image-wrapper {
-        width: 75%;
-        height: auto;
-        overflow: visible;
-      }
-
-      .hero-badge-image {
-        height: auto;
-        max-height: 500px;
+      .hero-brand-large {
+        font-size: 7rem;
       }
     }
 
-    /* Large Desktop */
-    @media (min-width: 1025px) {
-      .nav-logo {
-        height: 180px;
+    .hero-tagline {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+      font-weight: 700;
+    }
+
+    @media (min-width: 768px) {
+      .hero-tagline {
+        font-size: 2.5rem;
       }
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero {
+      padding: 1.125rem 2.5rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      transition: all var(--transition-base);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-hero:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-hero-primary {
+      background: var(--color-primary-forest);
+      color: white;
+      border: 2px solid var(--color-primary-forest);
+    }
+
+    .btn-hero-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-hero-secondary:hover {
+      background: white;
+      color: var(--color-primary-forest);
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+    .scroll-indicator svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    /* ============================================
+       SECTION STYLES
+       ============================================ */
+
+    .section {
+      padding: 7rem 0;
+    }
+
+    @media (max-width: 767px) {
+      .section {
+        padding: 4rem 0;
+      }
+    }
+
+    .section-light {
+      background: var(--color-cream);
+    }
+
+    .section-white {
+      background: white;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 3.5rem;
+      }
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: var(--color-medium-gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section-dark .section-subtitle {
+      color: var(--color-cream);
+      opacity: 0.9;
+    }
+
+    /* ============================================
+       PLACEHOLDER IMAGE SECTIONS
+       ============================================ */
+
+    .image-placeholder {
+      background: var(--color-light-gray);
+      border-radius: var(--radius-lg);
+      padding: 4rem 2rem;
+      text-align: center;
+      border: 3px dashed var(--color-medium-gray);
+      color: var(--color-medium-gray);
+      margin: 2rem 0;
+    }
+
+    .image-placeholder p {
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-primary-forest);
+      color: var(--color-cream);
+      padding: var(--space-4xl) 0 var(--space-xl);
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav container site-nav">
-    <div class="nav-logo-container">
-      <a href="index.html" class="nav-logo-link">
-        <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
-        <div class="nav-tagline">
-          Functional Sparkling Teas
-        </div>
-      </a>
-    </div>
-    <div class="nav hide-mobile">
-      <a href="beverages.html" class="nav-link">Beverages</a>
-      <a href="mushroom-science.html" class="nav-link" style="text-align: center; line-height: 1.2;">Mushroom<br>Science</a>
-      <a href="where-we-wander.html" class="nav-link" style="text-align: center; line-height: 1.2;">Where We<br>Wander</a>
-      <a href="partners.html" class="nav-link" style="text-align: center; line-height: 1.2;">Friends &<br>Partners</a>
-    </div>
-    <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-sm hide-mobile">Join Waitlist</a>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <!-- Logo -->
+      <div class="nav-logo-container">
+        <a href="index.html">
+          <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
+        </a>
+      </div>
 
-  <!-- Menu Backdrop -->
-  <div class="menu-backdrop" onclick="toggleMenu()"></div>
+      <!-- Desktop Menu -->
+      <ul class="nav-menu">
+        <li>
+          <a href="#products">Our Products</a>
+          <ul class="dropdown-menu">
+            <li><a href="beverages.html">All Beverages</a></li>
+            <li><a href="beverages.html#lemon-mint">Lemon & Mint</a></li>
+            <li><a href="beverages.html#chamomile-blackberry">Chamomile & Blackberry</a></li>
+            <li><a href="beverages.html#yuzu-cucumber">Yuzu & Cucumber</a></li>
+            <li><a href="beverages.html#hibiscus-orange">Hibiscus & Blood Orange</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="mushroom-science.html">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a href="mushroom-science.html">Mushroom Science</a></li>
+            <li><a href="mushroom-science.html#why-mushrooms">Health Benefits</a></li>
+            <li><a href="partners.html">Our Story</a></li>
+            <li><a href="beverages.html#ingredients">Ingredients</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="where-we-wander.html">Community</a>
+          <ul class="dropdown-menu">
+            <li><a href="where-we-wander.html">Where We Wander</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="partners.html#outdoor-alliance">Outdoor Alliance</a></li>
+            <li><a href="#" onclick="openModal(); return false;">Join Our Community</a></li>
+          </ul>
+        </li>
+      </ul>
 
-  <!-- Menu Overlay -->
-  <div class="menu-overlay">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="beverages.html">Beverages</a>
-      <a href="mushroom-science.html">Mushroom Science</a>
-      <a href="where-we-wander.html">Where We Wander</a>
-      <a href="partners.html">Friends & Partners</a>
-      <a href="#" onclick="openModal(); return false;" style="border: 2px solid #2C4161; text-align: center; border-radius: 8px; padding: 0.75rem 1.5rem;">Join Waitlist</a>
+      <!-- CTA Button -->
+      <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-sm hide-mobile" style="display: none;">Join Waitlist</a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-backdrop" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-nav-overlay">
+    <ul class="mobile-nav-menu">
+      <li>
+        <a href="#products" onclick="toggleMobileDropdown(event, 'products')">Our Products</a>
+        <ul class="mobile-dropdown" id="mobile-products">
+          <li><a href="beverages.html">All Beverages</a></li>
+          <li><a href="beverages.html#lemon-mint">Lemon & Mint</a></li>
+          <li><a href="beverages.html#chamomile-blackberry">Chamomile & Blackberry</a></li>
+          <li><a href="beverages.html#yuzu-cucumber">Yuzu & Cucumber</a></li>
+          <li><a href="beverages.html#hibiscus-orange">Hibiscus & Blood Orange</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="mushroom-science.html" onclick="toggleMobileDropdown(event, 'learn')">Learn</a>
+        <ul class="mobile-dropdown" id="mobile-learn">
+          <li><a href="mushroom-science.html">Mushroom Science</a></li>
+          <li><a href="mushroom-science.html#why-mushrooms">Health Benefits</a></li>
+          <li><a href="partners.html">Our Story</a></li>
+          <li><a href="beverages.html#ingredients">Ingredients</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="where-we-wander.html" onclick="toggleMobileDropdown(event, 'community')">Community</a>
+        <ul class="mobile-dropdown" id="mobile-community">
+          <li><a href="where-we-wander.html">Where We Wander</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="partners.html#outdoor-alliance">Outdoor Alliance</a></li>
+          <li><a href="#" onclick="openModal(); return false;">Join Our Community</a></li>
+        </ul>
+      </li>
+      <li style="margin-top: 2rem;">
+        <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-block">Join Waitlist</a>
+      </li>
+    </ul>
   </div>
 
-  <!-- Hero Block: Wander + Badge + Tagline -->
-  <section class="container text-center pt-3xl pb-3xl">
-    <!-- Hero Content Wrapper -->
-    <div class="hero-content-wrapper">
-      <!-- Wander Heading -->
-      <div class="hero-text-block">
-        <h2 class="hero-heading" style="margin-bottom: 0.5rem;">
-          <div class="hero-title" style="margin-bottom: 0.5rem; color: #1e2836;">WANDER.</div>
-          <div class="hero-subtitle" style="margin-bottom: 0.5rem; color: #4a5a6c;">Stay Curious. Explore. Connect.</div>
-          <div class="hero-title" style="margin-bottom: 0; color: #1e2836;">Nourish Your Journey.</div>
-        </h2>
+  <!-- Full-Screen Parallax Hero -->
+  <section class="parallax-hero">
+    <div class="parallax-bg" id="parallaxBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content-center">
+      <h1 class="hero-brand-large">WANDER STATE</h1>
+      <p class="hero-tagline">Nourish Your Journey</p>
+      <p class="hero-description">
+        Functional Sparkling Teas powered by mushrooms and pure maple water.
+      </p>
+      <p class="hero-description" style="margin-top: 0;">
+        Stay curious. Explore. Connect.
+      </p>
+      <div class="hero-cta-group">
+        <a href="beverages.html" class="btn-hero btn-hero-primary">Explore Our Teas</a>
+        <a href="#" onclick="openModal(); return false;" class="btn-hero btn-hero-secondary">Join Waitlist</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 16l-6-6h12z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Product Showcase Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Functional Sparkling Teas</h2>
+        <p class="section-subtitle">
+          Four unique flavors designed to support your adventures, from morning clarity to evening relaxation.
+        </p>
       </div>
 
-      <!-- Badge Image -->
-      <div class="hero-image-container">
-        <div class="hero-image-wrapper">
-          <img src="docs/assets/Brand Assets/Logos/Chamomile & Blackberry/WS_chamomile_NoTag_web.png" alt="Wander State" class="hero-badge-image">
+      <div class="product-grid-compact">
+        <!-- Product 1: Morning Clarity -->
+        <a href="beverages.html#lemon-mint" class="product-card-compact" style="border-color: var(--color-secondary-mint); text-decoration: none;">
+          <img src="docs/assets/Lemon-Mint_Center%20no%20white.png" alt="Lemon & Mint Can" loading="lazy" class="product-card-compact__image">
+          <div class="product-card-compact__content">
+            <h3 class="product-card-compact__name">Lemon & Mint</h3>
+            <p class="product-card-compact__tagline">Green Tea • Morning rituals • Creative work</p>
+            <span class="btn btn-outline btn-sm" style="margin-top: auto;">Learn More</span>
+          </div>
+        </a>
+
+        <!-- Product 2: Evening Unwind -->
+        <a href="beverages.html#chamomile-blackberry" class="product-card-compact" style="border-color: var(--color-secondary-lavender); text-decoration: none;">
+          <img src="docs/assets/Chamomile_Center%20no%20white.png" alt="Chamomile & Blackberry Can" loading="lazy" class="product-card-compact__image">
+          <div class="product-card-compact__content">
+            <h3 class="product-card-compact__name">Chamomile & Blackberry</h3>
+            <p class="product-card-compact__tagline">Herbal Tea • Evening unwind • Relaxation</p>
+            <span class="btn btn-outline btn-sm" style="margin-top: auto;">Learn More</span>
+          </div>
+        </a>
+
+        <!-- Product 3: Movement & Endurance -->
+        <a href="beverages.html#yuzu-cucumber" class="product-card-compact" style="border-color: var(--color-secondary-lemon); text-decoration: none;">
+          <img src="docs/assets/Yuzu_Center%20no%20white.png" alt="Yuzu & Cucumber Can" loading="lazy" class="product-card-compact__image">
+          <div class="product-card-compact__content">
+            <h3 class="product-card-compact__name">Yuzu & Cucumber</h3>
+            <p class="product-card-compact__tagline">Black Tea • Hikes • Gym • Movement</p>
+            <span class="btn btn-outline btn-sm" style="margin-top: auto;">Learn More</span>
+          </div>
+        </a>
+
+        <!-- Product 4: Social & Celebrations -->
+        <a href="beverages.html#hibiscus-orange" class="product-card-compact" style="border-color: var(--color-secondary-coral); text-decoration: none;">
+          <img src="docs/assets/Hibiscus_Center%20no%20white.png" alt="Hibiscus & Blood Orange Can" loading="lazy" class="product-card-compact__image">
+          <div class="product-card-compact__content">
+            <h3 class="product-card-compact__name">Hibiscus & Blood Orange</h3>
+            <p class="product-card-compact__tagline">Herbal Tea • Social moments • Dinner parties</p>
+            <span class="btn btn-outline btn-sm" style="margin-top: auto;">Learn More</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle Image Band -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="content-block">
+        <div class="content-block__image placeholder">
+          <p>Lifestyle / outdoor adventure photography</p>
+        </div>
+        <div class="content-block__text bg-dark">
+          <h3 class="h3">Wander with Purpose</h3>
+          <p>
+            Every can supports the trails, forests, and wild places that inspire us. Fuel your next adventure with functional mushrooms and real ingredients.
+          </p>
+          <a href="where-we-wander.html" class="btn btn-outline" style="align-self: flex-start; border-color: white; color: white;">Where We Wander</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Product Teaser Section -->
-  <section class="container pb-7xl" style="padding-top: 3rem;">
-    <h2 class="thirsty-rough text-center mb-2xl" style="font-size: var(--font-size-4xl); color: #2C4161;">Our Functional Sparkling Teas</h2>
-
-    <div class="product-grid">
-      <!-- Product 1: Morning Clarity -->
-      <div class="product-card" style="border-color: var(--color-secondary-mint); cursor: pointer;" onclick="window.location.href='beverages.html#lemon-mint';">
-        <img src="docs/assets/Lemon-Mint_Center%20no%20white.png" alt="Lemon & Mint Can" class="product-image" style="width: 100%; max-width: 250px; height: auto; margin: 0 auto 1.5rem; display: block;">
-        <h3 class="product-name">Lemon & Mint</h3>
-        <span class="product-benefit">Morning Clarity</span>
-        <p class="product-description">
-          Crisp, citrus-forward morning tea designed to support mental clarity and endurance with a clean energy boost.
-        </p>
-        <a href="#" onclick="event.stopPropagation(); openModal(); return false;" class="btn btn-outline btn-sm">Join Waitlist</a>
-      </div>
-
-      <!-- Product 2: Evening Unwind -->
-      <div class="product-card" style="border-color: var(--color-secondary-lavender); cursor: pointer;" onclick="window.location.href='beverages.html#chamomile-blackberry';">
-        <img src="docs/assets/Chamomile_Center%20no%20white.png" alt="Chamomile & Blackberry Can" class="product-image" style="width: 100%; max-width: 250px; height: auto; margin: 0 auto 1.5rem; display: block;">
-        <h3 class="product-name">Chamomile & Blackberry</h3>
-        <span class="product-benefit">Evening Unwind</span>
-        <p class="product-description">
-          A soothing sparkling tea designed to support relaxation and stress relief.
-        </p>
-        <a href="#" onclick="event.stopPropagation(); openModal(); return false;" class="btn btn-outline btn-sm">Join Waitlist</a>
-      </div>
-
-      <!-- Product 3: Movement & Endurance -->
-      <div class="product-card" style="border-color: var(--color-secondary-lemon); cursor: pointer;" onclick="window.location.href='beverages.html#yuzu-cucumber';">
-        <img src="docs/assets/Yuzu_Center%20no%20white.png" alt="Yuzu & Cucumber Can" class="product-image" style="width: 100%; max-width: 250px; height: auto; margin: 0 auto 1.5rem; display: block;">
-        <h3 class="product-name">Yuzu & Cucumber</h3>
-        <span class="product-benefit">Movement & Endurance</span>
-        <p class="product-description">
-          Refreshing, hydrating tea designed to support endurance and focus.
-        </p>
-        <a href="#" onclick="event.stopPropagation(); openModal(); return false;" class="btn btn-outline btn-sm">Join Waitlist</a>
-      </div>
-
-      <!-- Product 4: Social & Celebrations -->
-      <div class="product-card" style="border-color: var(--color-secondary-coral);">
-        <img src="docs/assets/Hibiscus_Center%20no%20white.png" alt="Hibiscus & Blood Orange Can" class="product-image" style="width: 100%; max-width: 250px; height: auto; margin: 0 auto 1.5rem; display: block;">
-        <h3 class="product-name">Hibiscus & Blood Orange</h3>
-        <span class="product-benefit">Social & Celebrations</span>
-        <p class="product-description">
-          A festive, Italian spritz inspired tea designed to support connection and relaxation with friends and family.
-        </p>
-        <a href="#" onclick="event.stopPropagation(); openModal(); return false;" class="btn btn-outline btn-sm">Join Waitlist</a>
+  <!-- Mushroom Science Teaser -->
+  <section class="section section-dark">
+    <div class="container text-center">
+      <h2 class="section-title" style="color: white;">Powered by Functional Mushrooms</h2>
+      <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">
+        Each can is packed with Lion's Mane, Reishi, and Cordyceps — full-spectrum mushrooms grown and tested in the U.S.
+      </p>
+      <div style="margin-top: 2rem;">
+        <a href="mushroom-science.html" class="btn btn-outline btn-lg">Learn the Science</a>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <section class="bg-gradient-mint pt-5xl pb-5xl text-center">
-    <div class="container">
-      <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-lg" style="font-family: 'TAY Birdie', cursive; background-color: #2C4161; border-color: #2C4161;">Nourish Your Journey</a>
+  <!-- Community CTA Section -->
+  <section class="section section-image" style="background: linear-gradient(135deg, #3D5A80, #2B4C6F);">
+    <div class="section-overlay" style="background: linear-gradient(135deg, rgba(43,76,111,0.9), rgba(30,58,95,0.8));"></div>
+    <div class="container text-center">
+      <h2 class="section-title" style="color: white;">Join the Wander State Community</h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem; color: rgba(255,255,255,0.9);">
+        Be the first to know when we launch. Get exclusive updates and early access.
+      </p>
+      <p style="color: rgba(255,255,255,0.4); font-size: 0.875rem; font-style: italic; margin-bottom: 2rem;">[ Community / outdoor gathering image placeholder ]</p>
+      <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-xl" style="font-family: 'TAY Birdie', cursive;">Nourish Your Journey</a>
     </div>
   </section>
 
@@ -473,31 +750,40 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <!-- Navigation -->
+        <!-- Our Products -->
         <div>
-          <h4 class="footer-section-title">Explore</h4>
-          <a href="beverages.html" class="footer-link">Beverages</a>
-          <a href="mushroom-science.html" class="footer-link">The Science</a>
-          <a href="partners.html" class="footer-link">Partners</a>
+          <h4 class="footer-section-title">Our Products</h4>
+          <a href="beverages.html" class="footer-link">All Beverages</a>
+          <a href="beverages.html#lemon-mint" class="footer-link">Lemon & Mint</a>
+          <a href="beverages.html#chamomile-blackberry" class="footer-link">Chamomile & Blackberry</a>
+          <a href="beverages.html#yuzu-cucumber" class="footer-link">Yuzu & Cucumber</a>
+        </div>
+
+        <!-- Learn -->
+        <div>
+          <h4 class="footer-section-title">Learn</h4>
+          <a href="mushroom-science.html" class="footer-link">Mushroom Science</a>
+          <a href="partners.html" class="footer-link">Our Story</a>
+          <a href="beverages.html#ingredients" class="footer-link">Ingredients</a>
+          <a href="faq.html" class="footer-link">FAQ</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+
+        <!-- Community -->
+        <div>
+          <h4 class="footer-section-title">Community</h4>
           <a href="where-we-wander.html" class="footer-link">Where We Wander</a>
-        </div>
-
-        <!-- Company -->
-        <div>
-          <h4 class="footer-section-title">Company</h4>
-          <a href="#about" class="footer-link">Our Story</a>
-          <a href="#contact" class="footer-link">Contact</a>
-          <a href="#wholesale" class="footer-link">Wholesale</a>
-          <a href="#blog" class="footer-link">Blog</a>
-        </div>
-
-        <!-- Connect -->
-        <div>
-          <h4 class="footer-section-title">Stay Connected</h4>
+          <a href="partners.html" class="footer-link">Partners</a>
           <a href="#" class="footer-link">Instagram</a>
-          <a href="#" class="footer-link">Twitter</a>
-          <a href="#" class="footer-link">Newsletter</a>
-          <a href="#faq" class="footer-link">FAQ</a>
+          <a href="#" onclick="openModal(); return false;" class="footer-link">Newsletter</a>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="footer-section-title">Legal</h4>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+          <a href="shipping-returns.html" class="footer-link">Shipping & Returns</a>
         </div>
       </div>
 
@@ -540,24 +826,56 @@
 
   <script src="script.js"></script>
   <script>
-    // Hamburger Menu Toggle
-    function toggleMenu() {
-      const hamburger = document.querySelector('.hamburger-menu');
-      const menuOverlay = document.querySelector('.menu-overlay');
-      const backdrop = document.querySelector('.menu-backdrop');
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      const overlay = document.querySelector('.mobile-nav-overlay');
+      const backdrop = document.querySelector('.mobile-nav-backdrop');
 
-      hamburger.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
+      toggle.classList.toggle('active');
+      overlay.classList.toggle('active');
       backdrop.classList.toggle('active');
 
       // Prevent body scroll when menu is open
-      if (menuOverlay.classList.contains('active')) {
+      if (overlay.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
       } else {
         document.body.style.overflow = 'auto';
       }
     }
 
+    // Mobile Dropdown Toggle
+    function toggleMobileDropdown(event, id) {
+      event.preventDefault();
+      const dropdown = document.getElementById('mobile-' + id);
+      dropdown.classList.toggle('active');
+    }
+
+    // Parallax Effect
+    let ticking = false;
+
+    function updateParallax() {
+      const parallaxBg = document.getElementById('parallaxBg');
+      const scrolled = window.pageYOffset;
+      const heroHeight = document.querySelector('.parallax-hero').offsetHeight;
+
+      if (scrolled <= heroHeight) {
+        parallaxBg.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+      }
+
+      ticking = false;
+    }
+
+    function requestTick() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', requestTick);
+
+    // Modal Functions
     function openModal() {
       document.getElementById('preReleaseModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
@@ -586,9 +904,7 @@
     window.addEventListener('DOMContentLoaded', function() {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('submitted') === 'true') {
-        // Show success message
         alert('🎉 Thanks for joining the waitlist! Check your email for confirmation.');
-        // Remove the query parameter from URL
         window.history.replaceState({}, document.title, window.location.pathname);
       }
     });

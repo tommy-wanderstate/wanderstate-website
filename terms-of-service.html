@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Service for WANDER STATE. Review our terms and conditions for using our website and purchasing our products.">
+  <title>Terms of Service | WANDER STATE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="docs/assets/Brand Assets/Logos/Wander State/png/WS_Icon.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drinkwanderstate.com/terms-of-service.html">
+  <meta property="og:title" content="Terms of Service | WANDER STATE">
+  <meta property="og:description" content="Terms of Service for WANDER STATE. Review our terms and conditions.">
+  <meta property="og:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="olipop_meets_lacroix_styleguide.css">
+  <style>
+    body {
+      background: var(--color-cream);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sticky Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding-left: var(--container-padding-mobile);
+      padding-right: var(--container-padding-mobile);
+    }
+
+    @media (min-width: 768px) {
+      .main-nav {
+        padding-left: var(--container-padding-desktop);
+        padding-right: var(--container-padding-desktop);
+      }
+    }
+
+    .nav-logo { height: 60px; width: auto; }
+    @media (min-width: 768px) { .nav-logo { height: 80px; } }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    @media (min-width: 1024px) { .nav-menu { display: flex; } }
+
+    .nav-menu > li { position: relative; margin: 0; }
+    .nav-menu > li > a {
+      font-family: var(--font-family-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      display: block;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+      background: none;
+      border: none;
+    }
+    @media (min-width: 1024px) { .mobile-menu-toggle { display: none; } }
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-primary-forest);
+      border-radius: 2px;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: var(--color-primary-forest);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .page-title {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) { .page-title { font-size: 3.5rem; } }
+
+    /* Legal Content */
+    .legal-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .legal-content h2 {
+      font-size: 1.75rem;
+      color: var(--color-primary-forest);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-light-gray);
+    }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content h3 {
+      font-size: 1.25rem;
+      color: var(--color-primary-forest);
+      margin: 2rem 0 0.75rem;
+    }
+    .legal-content p {
+      color: var(--color-dark-gray);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .legal-content ul {
+      color: var(--color-dark-gray);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .legal-content li { margin-bottom: 0.5rem; }
+    .legal-content em { color: var(--color-medium-gray); }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-primary-forest);
+      color: var(--color-cream);
+      padding: var(--space-4xl) 0 var(--space-xl);
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="nav-logo-container">
+        <a href="index.html">
+          <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="beverages.html">Our Products</a></li>
+        <li><a href="mushroom-science.html">Learn</a></li>
+        <li><a href="where-we-wander.html">Community</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" onclick="window.location.href='index.html'" aria-label="Home">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Terms of Service</h1>
+    </div>
+  </section>
+
+  <!-- Legal Content -->
+  <section class="legal-content">
+    <p><em>Last updated: January 2026</em></p>
+
+    <p>Welcome to Wander State. By accessing our website or placing an order, you agree to these terms.</p>
+
+    <h2>Products</h2>
+    <p>Wander State sparkling mushroom teas are dietary supplements / functional beverages. These statements have not been evaluated by the Food and Drug Administration. Our products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <p>We reserve the right to limit quantities, refuse orders, and modify or discontinue products at any time without notice.</p>
+
+    <h2>Pricing and Availability</h2>
+    <p>All prices are listed in U.S. dollars and are subject to change without notice. We make every effort to display accurate pricing, but errors may occur. If we discover a pricing error on your order, we'll contact you before processing.</p>
+
+    <h2>Orders and Payment</h2>
+    <p>By placing an order, you represent that you are at least 18 years of age. All orders are subject to acceptance and product availability. We reserve the right to cancel orders at our discretion.</p>
+    <p>Payment is processed securely through Shopify Payments at the time of order.</p>
+
+    <h2>Shipping and Delivery</h2>
+    <p>Please see our <a href="shipping-returns.html">Shipping & Returns</a> page for details on rates, processing times, and delivery estimates.</p>
+
+    <h2>Returns and Refunds</h2>
+    <p>Please see our <a href="shipping-returns.html">Shipping & Returns</a> page for details on our satisfaction guarantee.</p>
+
+    <h2>Intellectual Property</h2>
+    <p>All content on this site — including text, images, logos, and branding — is the property of Wander State LLC and is protected by applicable intellectual property laws. You may not reproduce, distribute, or use our content without written permission.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>Wander State LLC shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our products or website. Our total liability for any claim shall not exceed the amount you paid for the product in question.</p>
+
+    <h2>Governing Law</h2>
+    <p>These terms are governed by the laws of the State of [YOUR STATE — update before launch], without regard to conflict of law provisions.</p>
+
+    <h2>Changes to These Terms</h2>
+    <p>We may update these terms at any time. Continued use of our site after changes constitutes acceptance of the updated terms.</p>
+
+    <h2>Contact</h2>
+    <p>Questions? Email <strong>info@drinkwanderstate.com</strong>.</p>
+
+    <p>
+      Wander State LLC<br>
+      [Address — update before launch]<br>
+      info@drinkwanderstate.com
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4 class="footer-section-title">Our Products</h4>
+          <a href="beverages.html" class="footer-link">All Beverages</a>
+          <a href="beverages.html#lemon-mint" class="footer-link">Lemon & Mint</a>
+          <a href="beverages.html#chamomile-blackberry" class="footer-link">Chamomile & Blackberry</a>
+          <a href="beverages.html#yuzu-cucumber" class="footer-link">Yuzu & Cucumber</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Learn</h4>
+          <a href="mushroom-science.html" class="footer-link">Mushroom Science</a>
+          <a href="partners.html" class="footer-link">Our Story</a>
+          <a href="beverages.html#ingredients" class="footer-link">Ingredients</a>
+          <a href="faq.html" class="footer-link">FAQ</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Community</h4>
+          <a href="where-we-wander.html" class="footer-link">Where We Wander</a>
+          <a href="partners.html" class="footer-link">Partners</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Legal</h4>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+          <a href="shipping-returns.html" class="footer-link">Shipping & Returns</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 <span class="brand-name">WANDER STATE</span>. All rights reserved.</p>
+        <p class="mt-xs small">
+          These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

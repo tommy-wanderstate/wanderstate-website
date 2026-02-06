@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for WANDER STATE. Learn how we collect, use, and protect your personal information.">
+  <title>Privacy Policy | WANDER STATE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="docs/assets/Brand Assets/Logos/Wander State/png/WS_Icon.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drinkwanderstate.com/privacy-policy.html">
+  <meta property="og:title" content="Privacy Policy | WANDER STATE">
+  <meta property="og:description" content="Privacy Policy for WANDER STATE. Learn how we collect, use, and protect your personal information.">
+  <meta property="og:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="olipop_meets_lacroix_styleguide.css">
+  <style>
+    body {
+      background: var(--color-cream);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sticky Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding-left: var(--container-padding-mobile);
+      padding-right: var(--container-padding-mobile);
+    }
+
+    @media (min-width: 768px) {
+      .main-nav {
+        padding-left: var(--container-padding-desktop);
+        padding-right: var(--container-padding-desktop);
+      }
+    }
+
+    .nav-logo { height: 60px; width: auto; }
+    @media (min-width: 768px) { .nav-logo { height: 80px; } }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    @media (min-width: 1024px) { .nav-menu { display: flex; } }
+
+    .nav-menu > li { position: relative; margin: 0; }
+    .nav-menu > li > a {
+      font-family: var(--font-family-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      display: block;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+      background: none;
+      border: none;
+    }
+    @media (min-width: 1024px) { .mobile-menu-toggle { display: none; } }
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-primary-forest);
+      border-radius: 2px;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: var(--color-primary-forest);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .page-title {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) { .page-title { font-size: 3.5rem; } }
+
+    /* Legal Content */
+    .legal-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .legal-content h2 {
+      font-size: 1.75rem;
+      color: var(--color-primary-forest);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-light-gray);
+    }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content h3 {
+      font-size: 1.25rem;
+      color: var(--color-primary-forest);
+      margin: 2rem 0 0.75rem;
+    }
+    .legal-content p {
+      color: var(--color-dark-gray);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .legal-content ul {
+      color: var(--color-dark-gray);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .legal-content li { margin-bottom: 0.5rem; }
+    .legal-content em { color: var(--color-medium-gray); }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-primary-forest);
+      color: var(--color-cream);
+      padding: var(--space-4xl) 0 var(--space-xl);
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="nav-logo-container">
+        <a href="index.html">
+          <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="beverages.html">Our Products</a></li>
+        <li><a href="mushroom-science.html">Learn</a></li>
+        <li><a href="where-we-wander.html">Community</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" onclick="window.location.href='index.html'" aria-label="Home">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Privacy Policy</h1>
+    </div>
+  </section>
+
+  <!-- Legal Content -->
+  <section class="legal-content">
+    <p><em>Last updated: January 2026</em></p>
+
+    <p>Wander State LLC ("we," "us," "our") operates drinkwanderstate.com and associated services. This policy describes how we collect, use, and protect your personal information.</p>
+
+    <h2>Information We Collect</h2>
+
+    <h3>When you place an order, we collect:</h3>
+    <ul>
+      <li>Name, email address, phone number</li>
+      <li>Shipping and billing address</li>
+      <li>Payment information (processed securely by Shopify Payments — we do not store card details)</li>
+      <li>Order history</li>
+    </ul>
+
+    <h3>When you visit our site, we may automatically collect:</h3>
+    <ul>
+      <li>IP address, browser type, device information</li>
+      <li>Pages visited, time on site, referring URL</li>
+      <li>Cookies and similar tracking technologies</li>
+    </ul>
+
+    <h3>When you sign up for our waitlist or newsletter, we collect:</h3>
+    <ul>
+      <li>Email address</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To fulfill and ship your orders</li>
+      <li>To communicate about your order (confirmations, shipping updates)</li>
+      <li>To send marketing emails (only with your consent — you can unsubscribe anytime)</li>
+      <li>To improve our website and products</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+
+    <h2>How We Share Your Information</h2>
+    <p>We do not sell your personal information. We share data only with:</p>
+    <ul>
+      <li><strong>Shopify:</strong> Our e-commerce platform (processes orders and payments)</li>
+      <li><strong>Shipping carriers:</strong> To deliver your orders</li>
+      <li><strong>Analytics providers:</strong> Google Analytics (anonymized site usage data)</li>
+      <li><strong>Email service providers:</strong> To send transactional and marketing emails</li>
+    </ul>
+
+    <h2>Cookies</h2>
+    <p>We use cookies to maintain your shopping session, remember preferences, and understand how visitors use our site. You can disable cookies in your browser settings, though some site features may not function properly.</p>
+
+    <h2>Data Retention</h2>
+    <p>We retain order data as long as needed for business and legal purposes. You can request deletion of your personal data by emailing us.</p>
+
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request correction or deletion of your data</li>
+      <li>Opt out of marketing communications</li>
+      <li>Request a copy of your data in a portable format</li>
+    </ul>
+    <p>To exercise these rights, email <strong>info@drinkwanderstate.com</strong>.</p>
+
+    <h2>California Residents (CCPA)</h2>
+    <p>California residents have additional rights under the California Consumer Privacy Act, including the right to know what personal information we collect, the right to delete it, and the right to opt out of the sale of personal information. We do not sell personal information.</p>
+
+    <h2>Security</h2>
+    <p>We use industry-standard security measures, including SSL encryption and Shopify's PCI-compliant payment processing, to protect your data.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy? Email us at <strong>info@drinkwanderstate.com</strong>.</p>
+
+    <p>
+      Wander State LLC<br>
+      [Address — update before launch]<br>
+      info@drinkwanderstate.com
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4 class="footer-section-title">Our Products</h4>
+          <a href="beverages.html" class="footer-link">All Beverages</a>
+          <a href="beverages.html#lemon-mint" class="footer-link">Lemon & Mint</a>
+          <a href="beverages.html#chamomile-blackberry" class="footer-link">Chamomile & Blackberry</a>
+          <a href="beverages.html#yuzu-cucumber" class="footer-link">Yuzu & Cucumber</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Learn</h4>
+          <a href="mushroom-science.html" class="footer-link">Mushroom Science</a>
+          <a href="partners.html" class="footer-link">Our Story</a>
+          <a href="beverages.html#ingredients" class="footer-link">Ingredients</a>
+          <a href="faq.html" class="footer-link">FAQ</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Community</h4>
+          <a href="where-we-wander.html" class="footer-link">Where We Wander</a>
+          <a href="partners.html" class="footer-link">Partners</a>
+        </div>
+
+        <div>
+          <h4 class="footer-section-title">Legal</h4>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+          <a href="shipping-returns.html" class="footer-link">Shipping & Returns</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 <span class="brand-name">WANDER STATE</span>. All rights reserved.</p>
+        <p class="mt-xs small">
+          These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

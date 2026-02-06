@@ -1,0 +1,262 @@
+{% comment %}
+  WANDER STATE - Homepage Sections for Shopify
+
+  These sections should be added to your Shopify theme.
+  Go to: Online Store > Themes > Customize > Add Section
+
+  For custom sections, you may need to create new section files
+  in your theme's /sections folder.
+{% endcomment %}
+
+
+{%- comment -%}
+=====================================
+SECTION 1: HERO BANNER
+=====================================
+Add this as an "Image Banner" or custom "Hero" section
+{%- endcomment -%}
+
+<section class="ws-hero" style="background-image: url('{{ 'hero-mountain-background.jpg' | asset_url }}');">
+  <div class="ws-hero__content">
+    <h1 class="ws-hero__title">WANDER STATE</h1>
+    <p class="ws-hero__subtitle">Nourish Your Journey</p>
+    <p class="ws-hero__description">
+      Functional Sparkling Teas powered by mushrooms and pure maple water.<br>
+      Stay curious. Explore. Connect.
+    </p>
+    <div class="ws-hero__buttons">
+      <a href="/collections/all" class="button button--primary">Explore Our Teas</a>
+      <a href="/pages/our-story" class="button button--tertiary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+
+{%- comment -%}
+=====================================
+SECTION 2: FEATURED PRODUCTS
+=====================================
+Use Shopify's built-in "Featured Collection" section
+Configure with these settings:
+- Collection: All Products (or create "Featured" collection)
+- Heading: "Our Functional Sparkling Teas"
+- Description: "Four unique flavors designed to support your adventures, from morning clarity to evening relaxation."
+- Products to show: 4
+- Columns desktop: 4
+- Enable quick add: Yes
+{%- endcomment -%}
+
+{% comment %} Custom product grid if needed {% endcomment %}
+<section class="ws-py-4xl" style="background: var(--ws-cream);">
+  <div class="ws-container ws-text-center">
+    <h2 class="ws-mb-md">Our Functional Sparkling Teas</h2>
+    <p class="ws-mb-2xl" style="max-width: 700px; margin-left: auto; margin-right: auto; color: var(--ws-medium-gray);">
+      Four unique flavors designed to support your adventures, from morning clarity to evening relaxation.
+    </p>
+
+    <div class="ws-feature-grid" style="grid-template-columns: repeat(4, 1fr);">
+      {% for product in collections['all'].products limit: 4 %}
+        <a href="{{ product.url }}" class="ws-feature-card" style="text-decoration: none;">
+          <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title }}" style="max-width: 150px; margin: 0 auto var(--ws-space-md);">
+          <h3 class="ws-feature-card__title">{{ product.title }}</h3>
+          <p class="ws-feature-card__text">{{ product.metafields.custom.tagline | default: product.description | truncate: 60 }}</p>
+          <span class="button button--tertiary" style="margin-top: var(--ws-space-md);">Learn More</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+{%- comment -%}
+=====================================
+SECTION 3: CONTENT BLOCK - "Wander with Purpose"
+=====================================
+Use "Image with Text" section or create custom
+{%- endcomment -%}
+
+<section class="ws-py-3xl" style="background: var(--ws-cream);">
+  <div class="ws-container">
+    <div class="ws-content-block">
+      <div class="ws-content-block__image" style="background-image: url('{{ 'lifestyle-outdoor.jpg' | asset_url }}'); min-height: 400px;">
+      </div>
+      <div class="ws-content-block__text ws-content-block__text--dark">
+        <h3>Wander with Purpose</h3>
+        <p>
+          Every can supports the trails, forests, and wild places that inspire us.
+          Fuel your next adventure with functional mushrooms and real ingredients.
+        </p>
+        <a href="/pages/where-we-wander" class="button button--tertiary" style="align-self: flex-start;">Where We Wander</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{%- comment -%}
+=====================================
+SECTION 4: MUSHROOM SCIENCE BANNER
+=====================================
+Use "Image Banner" with text overlay or custom section
+{%- endcomment -%}
+
+<section class="ws-section-dark ws-py-4xl ws-text-center">
+  <div class="ws-container">
+    <h2 class="ws-mb-md">Powered by Functional Mushrooms</h2>
+    <p class="ws-mb-xl" style="max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+      Each can is packed with Lion's Mane, Reishi, and Cordyceps — full-spectrum mushrooms grown and tested in the U.S.
+    </p>
+    <a href="/pages/mushroom-science" class="button button--tertiary">Learn the Science</a>
+  </div>
+</section>
+
+
+{%- comment -%}
+=====================================
+SECTION 5: MEET YOUR MUSHROOMS
+=====================================
+Use "Multicolumn" section or create custom
+{%- endcomment -%}
+
+<section class="ws-py-4xl" style="background: var(--ws-white);">
+  <div class="ws-container ws-text-center">
+    <h2 class="ws-mb-md">Meet Your Mushrooms</h2>
+    <p class="ws-mb-2xl" style="max-width: 600px; margin-left: auto; margin-right: auto; color: var(--ws-medium-gray);">
+      Three powerful functional mushrooms, each with unique benefits.
+    </p>
+
+    <div class="ws-feature-grid">
+      <div class="ws-feature-card">
+        <img src="{{ 'mushroom-lions-mane.png' | asset_url }}" alt="Lion's Mane Mushroom" class="ws-feature-card__icon" style="width: 80px; height: 80px;">
+        <h4 class="ws-feature-card__title">Lion's Mane</h4>
+        <p class="ws-feature-card__text">Supports cognitive function, focus, and mental clarity. Known as the "smart mushroom."</p>
+      </div>
+
+      <div class="ws-feature-card">
+        <img src="{{ 'mushroom-reishi.png' | asset_url }}" alt="Reishi Mushroom" class="ws-feature-card__icon" style="width: 80px; height: 80px;">
+        <h4 class="ws-feature-card__title">Reishi</h4>
+        <p class="ws-feature-card__text">Promotes calm and relaxation. The "queen of mushrooms" for stress support.</p>
+      </div>
+
+      <div class="ws-feature-card">
+        <img src="{{ 'mushroom-cordyceps.png' | asset_url }}" alt="Cordyceps Mushroom" class="ws-feature-card__icon" style="width: 80px; height: 80px;">
+        <h4 class="ws-feature-card__title">Cordyceps</h4>
+        <p class="ws-feature-card__text">Supports natural energy and endurance. The athlete's choice for performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{%- comment -%}
+=====================================
+SECTION 6: TRUST BADGES / FEATURES
+=====================================
+Use "Multicolumn" section
+{%- endcomment -%}
+
+<section class="ws-py-3xl" style="background: var(--ws-cream);">
+  <div class="ws-container">
+    <div class="ws-feature-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="ws-text-center">
+        <div style="font-size: 2.5rem; margin-bottom: var(--ws-space-sm);">🌿</div>
+        <h4 style="font-size: 1rem; margin-bottom: var(--ws-space-xs);">Organic</h4>
+        <p style="font-size: 0.875rem; color: var(--ws-medium-gray); margin: 0;">USDA Certified Organic ingredients</p>
+      </div>
+
+      <div class="ws-text-center">
+        <div style="font-size: 2.5rem; margin-bottom: var(--ws-space-sm);">🚫</div>
+        <h4 style="font-size: 1rem; margin-bottom: var(--ws-space-xs);">Non-GMO</h4>
+        <p style="font-size: 0.875rem; color: var(--ws-medium-gray); margin: 0;">No genetically modified ingredients</p>
+      </div>
+
+      <div class="ws-text-center">
+        <div style="font-size: 2.5rem; margin-bottom: var(--ws-space-sm);">0️⃣</div>
+        <h4 style="font-size: 1rem; margin-bottom: var(--ws-space-xs);">Zero Sugar</h4>
+        <p style="font-size: 0.875rem; color: var(--ws-medium-gray); margin: 0;">No added sugar, naturally sweetened</p>
+      </div>
+
+      <div class="ws-text-center">
+        <div style="font-size: 2.5rem; margin-bottom: var(--ws-space-sm);">🔥</div>
+        <h4 style="font-size: 1rem; margin-bottom: var(--ws-space-xs);">10 Calories</h4>
+        <p style="font-size: 0.875rem; color: var(--ws-medium-gray); margin: 0;">Light and refreshing, guilt-free</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{%- comment -%}
+=====================================
+SECTION 7: NEWSLETTER SIGNUP CTA
+=====================================
+Use "Newsletter" section or "Email Signup Banner"
+{%- endcomment -%}
+
+<section class="ws-section-dark ws-py-4xl ws-text-center">
+  <div class="ws-container">
+    <h2 class="ws-mb-md">Join the Wander State Community</h2>
+    <p class="ws-mb-xl" style="max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+      Be the first to know about new flavors, exclusive offers, and outdoor adventures.
+    </p>
+
+    {% form 'customer', class: 'newsletter-form' %}
+      <div style="display: flex; gap: var(--ws-space-sm); max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+        <input type="email" name="contact[email]" placeholder="Enter your email" required style="flex: 1; min-width: 250px; padding: 0.875rem 1rem; border-radius: var(--ws-radius-md); border: none;">
+        <button type="submit" class="button button--secondary">Subscribe</button>
+      </div>
+    {% endform %}
+
+    <p style="font-size: 0.75rem; opacity: 0.6; margin-top: var(--ws-space-md);">
+      We respect your privacy. Unsubscribe anytime.
+    </p>
+  </div>
+</section>
+
+
+{%- comment -%}
+=====================================
+FOOTER CONTENT SUGGESTIONS
+=====================================
+Configure your footer in Theme Settings with these columns:
+
+Column 1 - Our Products:
+- All Beverages → /collections/all
+- Lemon & Mint → /products/lemon-mint
+- Chamomile & Blackberry → /products/chamomile-blackberry
+- Yuzu & Cucumber → /products/yuzu-cucumber
+- Hibiscus & Blood Orange → /products/hibiscus-blood-orange
+
+Column 2 - Learn:
+- Mushroom Science → /pages/mushroom-science
+- Our Story → /pages/our-story
+- Ingredients → /pages/ingredients
+- FAQ → /pages/faq
+
+Column 3 - Community:
+- Where We Wander → /pages/where-we-wander
+- Partners → /pages/partners
+- Instagram → https://instagram.com/wanderstate
+- Contact → /pages/contact
+
+Column 4 - Legal:
+- Privacy Policy → /policies/privacy-policy
+- Terms of Service → /policies/terms-of-service
+- Shipping & Returns → /policies/shipping-policy
+- Refund Policy → /policies/refund-policy
+
+Footer bottom text:
+"These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease."
+{%- endcomment -%}
+
+
+{%- comment -%}
+=====================================
+ANNOUNCEMENT BAR SUGGESTIONS
+=====================================
+Add to Theme Settings > Header > Announcement Bar:
+
+Option 1: "Free Shipping on Orders $50+ | Shop Now"
+Option 2: "Functional Mushrooms + Real Tea = Your New Daily Ritual"
+Option 3: "New! Try Our Variety Pack - All 4 Flavors"
+{%- endcomment -%}

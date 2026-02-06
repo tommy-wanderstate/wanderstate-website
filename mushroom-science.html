@@ -5,220 +5,349 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The science behind functional mushrooms. Learn about Lion's Mane, Reishi, and Cordyceps backed by research.">
   <title>Mushroom Science | WANDER STATE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="docs/assets/Brand Assets/Logos/Wander State/png/WS_Icon.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drinkwanderstate.com/mushroom-science.html">
+  <meta property="og:title" content="Mushroom Science | WANDER STATE">
+  <meta property="og:description" content="The science behind functional mushrooms. Learn about Lion's Mane, Reishi, and Cordyceps backed by research.">
+  <meta property="og:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mushroom Science | WANDER STATE">
+  <meta name="twitter:description" content="The science behind functional mushrooms. Learn about Lion's Mane, Reishi, and Cordyceps backed by research.">
+  <meta name="twitter:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="olipop_meets_lacroix_styleguide.css">
   <style>
-    /* Mobile Optimizations */
-    @media (max-width: 767px) {
-      .mobile-logo {
-        height: 100px !important;
-      }
-
-      .mobile-hide-tagline {
-        display: none !important;
-      }
-
-      .mobile-nav {
-        margin-bottom: 0.5rem !important;
-        border-radius: 0 !important;
-      }
-
-      .mobile-hero-heading {
-        font-size: 2.5rem !important;
-      }
-
-      .grid-cols-3 {
-        grid-template-columns: 1fr !important;
-      }
-
-      .grid-cols-2 {
-        grid-template-columns: 1fr !important;
-      }
-
-      /* Reduce all excessive spacing on mobile */
-      .pt-7xl {
-        padding-top: 2rem !important;
-      }
-
-      .pb-7xl {
-        padding-bottom: 2rem !important;
-      }
-
-      .pt-5xl {
-        padding-top: 1.5rem !important;
-      }
-
-      .pb-5xl {
-        padding-bottom: 1.5rem !important;
-      }
-
-      .mb-3xl {
-        margin-bottom: 1.5rem !important;
-      }
-
-      .pt-3xl {
-        padding-top: 1.5rem !important;
-      }
-
-      .pb-3xl {
-        padding-bottom: 1.5rem !important;
-      }
-
-      .pt-2xl {
-        padding-top: 1rem !important;
-      }
-
-      .pb-2xl {
-        padding-bottom: 1rem !important;
-      }
-
-      /* Reduce mushroom mycelium image size on mobile */
-      .mushroom-mycelium-container {
-        max-height: 250px !important;
-      }
-
-      .mushroom-mycelium-img {
-        max-height: 250px !important;
-      }
-
-      /* Make all backgrounds transparent or semi-transparent on mobile to show mountain background */
-      html {
-        height: 100%;
-        min-height: 100vh !important;
-      }
-
-      body {
-        background-image: url('docs/assets/Brand Assets/Color Palettes/mountain background png.png') !important;
-        background-size: auto 2000px !important;
-        background-position: center top !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
-        min-height: 100vh !important;
-        height: auto !important;
-      }
-
-      /* Restore normal nav on mobile */
-      .nav {
-        background: linear-gradient(to bottom, #FBF9F5 0%, #FFFFFF 100%) !important;
-      }
-
-      /* Make all sections transparent or semi-transparent */
-      section {
-        background: transparent !important;
-      }
-
-      /* For sections that need some background, make them semi-transparent */
-      .bg-cream,
-      .bg-gradient-mint,
-      .bg-gradient-earth,
-      .bg-gradient-sunset,
-      .bg-gradient-forest {
-        background: rgba(250, 248, 245, 0.25) !important;
-      }
+    body {
+      background: var(--color-cream);
+      margin: 0;
+      padding: 0;
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
-      .mobile-logo {
-        height: 120px !important;
-      }
+    /* Sticky Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
     }
 
-    /* Desktop Background */
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding-left: var(--container-padding-mobile);
+      padding-right: var(--container-padding-mobile);
+    }
+
     @media (min-width: 768px) {
-      body {
-        background-image: url('docs/assets/Brand Assets/Color Palettes/mountain background png.png');
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
+      .main-nav {
+        padding-left: var(--container-padding-desktop);
+        padding-right: var(--container-padding-desktop);
       }
     }
 
-    /* Hamburger Menu Styles */
-    .hamburger-menu {
+    .nav-logo-container {
+      flex-shrink: 0;
+    }
+
+    .nav-logo {
+      height: 60px;
+      width: auto;
+    }
+
+    @media (min-width: 768px) {
+      .nav-logo {
+        height: 80px;
+      }
+    }
+
+    /* Desktop Navigation */
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-menu {
+        display: flex;
+      }
+    }
+
+    .nav-menu > li {
+      position: relative;
+      margin: 0;
+    }
+
+    .nav-menu > li > a {
+      font-family: var(--font-family-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      display: block;
+      transition: all var(--transition-base);
+      position: relative;
+    }
+
+    .nav-menu > li > a::after {
+      content: '';
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color var(--transition-base);
+    }
+
+    .nav-menu > li > a:hover {
+      color: var(--color-secondary-coral);
+    }
+
+    .nav-menu > li > a:hover::after {
+      background-color: var(--color-secondary-coral);
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: -1rem;
+      background: white;
+      min-width: 220px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      padding: 1rem 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all var(--transition-base);
+      list-style: none;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .nav-menu > li:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: var(--color-dark-gray);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all var(--transition-fast);
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--color-cream);
+      color: var(--color-primary-forest);
+      padding-left: 2rem;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
       display: flex;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
       padding: 10px;
+      background: none;
+      border: none;
       z-index: 1001;
     }
 
-    .hamburger-menu span {
+    @media (min-width: 1024px) {
+      .mobile-menu-toggle {
+        display: none;
+      }
+    }
+
+    .mobile-menu-toggle span {
       width: 25px;
       height: 3px;
-      background-color: #2C4161;
+      background-color: var(--color-primary-forest);
       border-radius: 2px;
       transition: all 0.3s ease;
     }
 
-    .hamburger-menu.active span:nth-child(1) {
+    .mobile-menu-toggle.active span:nth-child(1) {
       transform: rotate(45deg) translate(8px, 8px);
     }
 
-    .hamburger-menu.active span:nth-child(2) {
+    .mobile-menu-toggle.active span:nth-child(2) {
       opacity: 0;
     }
 
-    .hamburger-menu.active span:nth-child(3) {
+    .mobile-menu-toggle.active span:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .menu-overlay {
+    .mobile-nav-overlay {
       position: fixed;
       top: 0;
       right: -100%;
-      width: 300px;
+      width: 320px;
+      max-width: 85vw;
       height: 100vh;
-      background: linear-gradient(to bottom, #FBF9F5 0%, #FFFFFF 100%);
-      box-shadow: -2px 0 12px rgba(47, 79, 63, 0.15);
+      background: white;
+      box-shadow: -2px 0 20px rgba(0, 0, 0, 0.15);
       transition: right 0.3s ease;
       z-index: 1000;
-      padding: 80px 2rem 2rem;
+      padding: 100px 2rem 2rem;
+      overflow-y: auto;
     }
 
-    .menu-overlay.active {
+    .mobile-nav-overlay.active {
       right: 0;
     }
 
-    .menu-overlay nav {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    .mobile-nav-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .menu-overlay a {
-      color: #2C4161;
-      text-decoration: none;
+    .mobile-nav-menu > li {
+      margin-bottom: 1rem;
+    }
+
+    .mobile-nav-menu > li > a {
       font-size: 1.25rem;
-      font-weight: 400;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(44, 65, 97, 0.1);
-      transition: color 0.2s ease;
-    }
-
-    .menu-overlay a:hover {
+      font-weight: 600;
       color: var(--color-primary-forest);
+      text-decoration: none;
+      display: block;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-light-gray);
     }
 
-    .menu-backdrop {
+    .mobile-dropdown {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      list-style: none;
+      display: none;
+    }
+
+    .mobile-dropdown.active {
+      display: block;
+    }
+
+    .mobile-dropdown a {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--color-dark-gray);
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav-backdrop {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.4);
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
       z-index: 999;
     }
 
-    .menu-backdrop.active {
+    .mobile-nav-backdrop.active {
       opacity: 1;
       visibility: visible;
+    }
+
+    /* Page Header — Dark Navy */
+    .page-header {
+      position: relative;
+      background: var(--color-primary-forest);
+      padding: 5rem 0 4rem;
+      text-align: center;
+      color: white;
+    }
+
+    .page-header .image-placeholder-note {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.875rem;
+      font-style: italic;
+      margin-top: 1.5rem;
+    }
+
+    .page-title {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    @media (min-width: 768px) {
+      .page-title {
+        font-size: 4rem;
+      }
+    }
+
+    .page-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 7rem 0;
+    }
+
+    @media (max-width: 767px) {
+      .section {
+        padding: 4rem 0;
+      }
+    }
+
+    .section-light {
+      background: var(--color-cream);
+    }
+
+    .section-white {
+      background: white;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-primary-forest);
+      color: var(--color-cream);
+      padding: var(--space-4xl) 0 var(--space-xl);
+      margin-top: 0;
     }
 
     /* Mushroom Card Styles */
@@ -244,105 +373,154 @@
       font-size: 4rem;
     }
 
-    .science-callout {
-      background: linear-gradient(135deg, var(--color-cream) 0%, #FFFFFF 100%);
-      border-left: 4px solid var(--color-primary-forest);
-      padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-    }
+    /* science-callout removed — replaced by content-block panels */
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav container mobile-nav" style="padding-top: 1.5rem; padding-bottom: 1.5rem; background: linear-gradient(to bottom, #FBF9F5 0%, #FFFFFF 100%); margin-bottom: 0.75rem; border-radius: 0 0 16px 16px; box-shadow: 0 2px 12px rgba(47, 79, 63, 0.04);">
-    <div style="flex: 1;">
-      <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 1.5rem;">
-        <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="mobile-logo" style="height: 160px; width: auto;">
-        <div style="font-family: 'Thirsty Rough', serif; font-size: 1.5rem; color: #2C4161; line-height: 1.2;">
-          Functional Sparkling Teas
-        </div>
-      </a>
-    </div>
-    <div class="nav hide-mobile">
-      <a href="beverages.html" class="nav-link">Beverages</a>
-      <a href="mushroom-science.html" class="nav-link active" style="text-align: center; line-height: 1.2;">Mushroom<br>Science</a>
-      <a href="where-we-wander.html" class="nav-link" style="text-align: center; line-height: 1.2;">Where We<br>Wander</a>
-      <a href="partners.html" class="nav-link" style="text-align: center; line-height: 1.2;">Friends &<br>Partners</a>
-    </div>
-    <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-sm hide-mobile">Join Waitlist</a>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="nav-logo-container">
+        <a href="index.html">
+          <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
+        </a>
+      </div>
 
-  <!-- Menu Backdrop -->
-  <div class="menu-backdrop" onclick="toggleMenu()"></div>
+      <ul class="nav-menu">
+        <li>
+          <a href="#products">Our Products</a>
+          <ul class="dropdown-menu">
+            <li><a href="beverages.html">All Beverages</a></li>
+            <li><a href="beverages.html#lemon-mint">Lemon & Mint</a></li>
+            <li><a href="beverages.html#chamomile-blackberry">Chamomile & Blackberry</a></li>
+            <li><a href="beverages.html#yuzu-cucumber">Yuzu & Cucumber</a></li>
+            <li><a href="beverages.html#hibiscus-orange">Hibiscus & Blood Orange</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="mushroom-science.html">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a href="mushroom-science.html">Mushroom Science</a></li>
+            <li><a href="#why-mushrooms">Health Benefits</a></li>
+            <li><a href="partners.html">Our Story</a></li>
+            <li><a href="beverages.html#ingredients">Ingredients</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="where-we-wander.html">Community</a>
+          <ul class="dropdown-menu">
+            <li><a href="where-we-wander.html">Where We Wander</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="partners.html#outdoor-alliance">Outdoor Alliance</a></li>
+            <li><a href="#" onclick="openModal(); return false;">Join Our Community</a></li>
+          </ul>
+        </li>
+      </ul>
 
-  <!-- Menu Overlay -->
-  <div class="menu-overlay">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="beverages.html">Beverages</a>
-      <a href="mushroom-science.html">Mushroom Science</a>
-      <a href="where-we-wander.html">Where We Wander</a>
-      <a href="partners.html">Friends & Partners</a>
-      <a href="#" onclick="openModal(); return false;" style="border: 2px solid #2C4161; text-align: center; border-radius: 8px; padding: 0.75rem 1.5rem;">Join Waitlist</a>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav-backdrop" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-nav-overlay">
+    <ul class="mobile-nav-menu">
+      <li>
+        <a href="#products" onclick="toggleMobileDropdown(event, 'products')">Our Products</a>
+        <ul class="mobile-dropdown" id="mobile-products">
+          <li><a href="beverages.html">All Beverages</a></li>
+          <li><a href="beverages.html#lemon-mint">Lemon & Mint</a></li>
+          <li><a href="beverages.html#chamomile-blackberry">Chamomile & Blackberry</a></li>
+          <li><a href="beverages.html#yuzu-cucumber">Yuzu & Cucumber</a></li>
+          <li><a href="beverages.html#hibiscus-orange">Hibiscus & Blood Orange</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="mushroom-science.html" onclick="toggleMobileDropdown(event, 'learn')">Learn</a>
+        <ul class="mobile-dropdown" id="mobile-learn">
+          <li><a href="mushroom-science.html">Mushroom Science</a></li>
+          <li><a href="#why-mushrooms">Health Benefits</a></li>
+          <li><a href="partners.html">Our Story</a></li>
+          <li><a href="beverages.html#ingredients">Ingredients</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="where-we-wander.html" onclick="toggleMobileDropdown(event, 'community')">Community</a>
+        <ul class="mobile-dropdown" id="mobile-community">
+          <li><a href="where-we-wander.html">Where We Wander</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="partners.html#outdoor-alliance">Outdoor Alliance</a></li>
+          <li><a href="#" onclick="openModal(); return false;">Join Our Community</a></li>
+        </ul>
+      </li>
+      <li style="margin-top: 2rem;">
+        <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-block">Join Waitlist</a>
+      </li>
+    </ul>
   </div>
 
-  <!-- Hero Section -->
-  <section class="container text-center pt-7xl pb-7xl">
-    <h1 class="h1 mb-lg mobile-hero-heading">Nature's Classics</h1>
-    <p class="lead mx-auto" style="max-width: 900px;">
-      Rooted in tradition, guided by modern science.
-    </p>
+  <!-- Page Header — Dark Navy -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Nature's Classics</h1>
+      <p class="page-subtitle">
+        Rooted in tradition, guided by modern science.
+      </p>
+      <p class="image-placeholder-note">[ Mushroom forest / cultivation image placeholder ]</p>
+    </div>
   </section>
 
   <!-- Why Mushrooms Section -->
-  <section class="bg-cream pt-7xl pb-7xl">
+  <section id="why-mushrooms" class="section section-light">
     <div class="container">
       <h2 class="h2 text-center mb-3xl">Why Functional Mushrooms?</h2>
 
-      <div class="mb-3xl">
-        <p class="mb-md" style="font-size: 1.125rem; line-height: 1.75;">
-          Humans have been turning to mushrooms for centuries. Across cultures, people noticed that certain fungi supported functional benefits including energy, endurance, focus, clarity, and stress relief.
-        </p>
-        <p style="font-size: 1.125rem; line-height: 1.75;">
-          Today, science is helping to explain why fungi have held our attention for so long. It's where ancient wisdom and modern science intersect: scientists have spent decades studying the unique chemistry of functional mushrooms—compounds like polysaccharides, terpenes, and antioxidants—and how these bioactive molecules benefit humans. At Wander State, we love functional mushrooms because they support enhancing the good things you're already doing for yourself.
-        </p>
+      <!-- Intro block: image left, text right -->
+      <div class="content-block mb-3xl">
+        <div class="content-block__image placeholder">
+          <p>Ancient mushroom cultivation / foraging photography</p>
+        </div>
+        <div class="content-block__text">
+          <h3 class="h3">Centuries of Wisdom, Backed by Modern Science</h3>
+          <p>
+            Humans have been turning to mushrooms for centuries. Across cultures, people noticed that certain fungi supported functional benefits including energy, endurance, focus, clarity, and stress relief.
+          </p>
+          <p>
+            Today, science is helping to explain why fungi have held our attention for so long. Scientists have spent decades studying the unique chemistry of functional mushrooms — compounds like polysaccharides, terpenes, and antioxidants — and how these bioactive molecules benefit humans.
+          </p>
+          <p>At Wander State, we love functional mushrooms because they support enhancing the good things you're already doing for yourself.</p>
+        </div>
       </div>
 
-      <div class="science-callout">
-        <h4 class="h4 mb-md">Why Wander State Mushrooms</h4>
-
-        <div class="grid grid-cols-2 gap-2xl items-center">
-          <div>
-            <p class="mb-sm" style="color: var(--color-dark-gray);"><strong>The Challenge in the Mushroom Space</strong></p>
-            <p class="mb-md" style="color: var(--color-dark-gray);">
-              The functional mushroom world is exciting—but not always transparent. Many products use only one part of the mushroom, leaving out bioactive compounds found elsewhere. Add in unclear sourcing, inconsistent extraction, and limited testing, and it can be hard to know what you're really getting.
-            </p>
-
-            <p class="mb-sm" style="color: var(--color-dark-gray);"><strong>How We Choose to Do It</strong></p>
-            <p class="mb-md" style="color: var(--color-dark-gray);">
-              Wander State uses Full Spectrum, High Potency mushrooms, using both mycelium and fruiting bodies to capture the full array of naturally occurring bioactive compounds in mushrooms. Our partner, Monterey Nutra, is the only fully vertically integrated mushroom farm in the U.S., with proprietary mushroom genealogy, blends, and extraction methods that unlock the full bioactive potential of every mushroom we use.
-            </p>
-
-            <p class="mb-0" style="color: var(--color-dark-gray);">
-              Every lot is independently tested for potency, and we publish the COAs so you know exactly what's in your beverage. We believe transparency is essential—and we're proud of the mushrooms we use.
-            </p>
-          </div>
-
+      <!-- Why Wander State block: text left, image right -->
+      <div class="content-block reverse">
+        <div class="content-block__image placeholder">
+          <p>Monterey Nutra mushroom farm / cultivation image</p>
+        </div>
+        <div class="content-block__text bg-cream">
+          <h3 class="h3">Why Wander State Mushrooms</h3>
+          <p>
+            <strong>The Challenge:</strong> The functional mushroom world is exciting — but not always transparent. Many products use only one part of the mushroom, leaving out bioactive compounds found elsewhere. Add in unclear sourcing, inconsistent extraction, and limited testing, and it can be hard to know what you're really getting.
+          </p>
+          <p>
+            <strong>How We Do It:</strong> Wander State uses Full Spectrum, High Potency mushrooms — both mycelium and fruiting bodies — to capture the full array of naturally occurring bioactive compounds. Our partner, Monterey Nutra, is the only fully vertically integrated mushroom farm in the U.S.
+          </p>
+          <p>
+            Every lot is independently tested for potency, and we publish the COAs so you know exactly what's in your beverage. Transparency is essential — and we're proud of the mushrooms we use.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Meet the Mushrooms Section -->
-  <section class="container pt-7xl pb-7xl">
+  <section class="section section-white">
+    <div class="container">
     <h2 class="h2 text-center mb-3xl">Meet Your Mushrooms</h2>
 
     <div class="grid grid-cols-3 gap-2xl">
@@ -350,7 +528,7 @@
       <div class="card mushroom-card">
         <div class="card-body text-center">
           <div class="mushroom-icon" style="background: transparent;">
-            <img src="docs/assets/lions mane image.png" alt="Lion's Mane mushroom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: none; outline: none;">
+            <img src="docs/assets/lions mane image.png" alt="Lion's Mane mushroom" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: none; outline: none;">
           </div>
           <h3 class="h4 mb-md">Lion's Mane</h3>
           <p class="small mb-md" style="font-style: italic; color: var(--color-medium-gray);">Hericium erinaceus</p>
@@ -377,7 +555,7 @@
       <div class="card mushroom-card">
         <div class="card-body text-center">
           <div class="mushroom-icon" style="background: transparent;">
-            <img src="docs/assets/reishi image.png" alt="Reishi mushroom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: none; outline: none;">
+            <img src="docs/assets/reishi image.png" alt="Reishi mushroom" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: none; outline: none;">
           </div>
           <h3 class="h4 mb-md">Reishi</h3>
           <p class="small mb-md" style="font-style: italic; color: var(--color-medium-gray);">Ganoderma lucidum</p>
@@ -404,7 +582,7 @@
       <div class="card mushroom-card">
         <div class="card-body text-center">
           <div class="mushroom-icon" style="background: transparent;">
-            <img src="docs/assets/cordyceps image.png" alt="Cordyceps mushroom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            <img src="docs/assets/cordyceps image.png" alt="Cordyceps mushroom" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
           </div>
           <h3 class="h4 mb-md">Cordyceps</h3>
           <p class="small mb-md" style="font-style: italic; color: var(--color-medium-gray);">Cordyceps militaris</p>
@@ -427,95 +605,111 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Full-Spectrum Philosophy Section -->
-  <section class="bg-cream pt-7xl pb-7xl">
+  <section class="section section-light">
     <div class="container">
       <h2 class="h2 text-center mb-3xl">Guided by Nature. Grounded in Science.</h2>
 
-      <div class="grid grid-cols-2 gap-2xl items-center mb-3xl">
-        <div>
-          <h3 class="h3 mb-md">Modern Biotechnology Shaping the Future of Functional Mushrooms</h3>
-          <p class="mb-md" style="font-size: 1.125rem; line-height: 1.75;">
+      <!-- Biotech block: image left, text right -->
+      <div class="content-block mb-3xl">
+        <div class="content-block__image placeholder">
+          <p>Monterey Nutra lab / cultivation facility</p>
+        </div>
+        <div class="content-block__text">
+          <h3 class="h3">Modern Biotechnology Meets Functional Mushrooms</h3>
+          <p>
             Monterey Nutra represents a significant advancement in the standardization, potency, and quality of functional mushroom ingredients. They combine proprietary strains with advanced cultivation and testing methods to deliver unprecedented levels of bioactive compounds.
           </p>
-          <p class="mb-md" style="color: var(--color-dark-gray);">
-            <strong>Two powerful sources of bioactive compounds:</strong> Both the mycelium and the fruiting body contain distinct sets of naturally occurring compounds that contribute to a mushroom's functional profile. Many commercial products rely on only one component—often missing the broader range of bioactives found when both are used together.
+          <p>
+            <strong>Two powerful sources:</strong> Both the mycelium and the fruiting body contain distinct sets of naturally occurring compounds. Many commercial products rely on only one component — missing the broader range of bioactives found when both are used together.
           </p>
-          <p class="mb-md" style="color: var(--color-dark-gray);">
-            <strong>The Monterey Nutra process:</strong> Each component is cultivated under optimized conditions to preserve its distinct chemistry. High-terpene fruiting bodies are grown on specially selected substrate to support optimal potency. The mycelium is fermented to concentrate key compounds. The two components are then combined into a single standardized ingredient through Monterey Nutra's proprietary dual-extraction process.
-          </p>
-          <p class="mb-md" style="color: var(--color-dark-gray);">
-            This approach delivers a complete range of beneficial compounds, creating what Monterey Nutra describes as "a full-spectrum extract with exceptional neurological and metabolic benefits."
-          </p>
-          <p class="mb-0" style="color: var(--color-dark-gray);">
-            <strong>Why it matters:</strong> You get the synergistic benefits of both components working together—not just isolated pieces. The complete beneficial profile verified by third-party testing.
+          <p>
+            <strong>Why it matters:</strong> You get the synergistic benefits of both components working together — not just isolated pieces. The complete beneficial profile is verified by third-party testing.
           </p>
         </div>
       </div>
 
-      <div class="science-callout">
-        <h4 class="h4 mb-md">Proprietary Dual-Extraction Process</h4>
-        <p class="mb-md">
-          Monterey Nutra enhances our mushroom extracts through a proprietary dual-extraction process that maximizes bioactive compound retention:
-        </p>
-        <p class="mb-sm" style="color: var(--color-dark-gray);">
-          <strong>Step 1:</strong> Hot water extraction to capture beta-glucans and all water-soluble compounds.
-        </p>
-        <p class="mb-sm" style="color: var(--color-dark-gray);">
-          <strong>Step 2:</strong> Fermentation extraction to capture all fat-soluble compounds like erinacines, hericenes, and hericenones.
-        </p>
-        <p class="mb-md" style="color: var(--color-dark-gray);">
-          <strong>Step 3:</strong> Controlled dehydration to maximize retention of all compounds of interest.
-        </p>
-        <p class="mb-0">
-          <strong>The result:</strong> An exceptionally broad and potent metabolite profile with total quantified content of bioactive terpenes exceeding 2,000 mcg/g—verified by third-party analytical testing.
-        </p>
+      <!-- Dual-Extraction block: text left, image right -->
+      <div class="content-block reverse">
+        <div class="content-block__image placeholder">
+          <p>Dual-extraction process / lab testing photography</p>
+        </div>
+        <div class="content-block__text bg-dark">
+          <h3 class="h3">Proprietary Dual-Extraction Process</h3>
+          <p>
+            Monterey Nutra enhances our mushroom extracts through a proprietary dual-extraction process that maximizes bioactive compound retention:
+          </p>
+          <p>
+            <strong>Step 1:</strong> Hot water extraction to capture beta-glucans and all water-soluble compounds.
+          </p>
+          <p>
+            <strong>Step 2:</strong> Fermentation extraction to capture all fat-soluble compounds like erinacines, hericenes, and hericenones.
+          </p>
+          <p>
+            <strong>Step 3:</strong> Controlled dehydration to maximize retention of all compounds of interest.
+          </p>
+          <p>
+            <strong>The result:</strong> An exceptionally broad and potent metabolite profile with total quantified content of bioactive terpenes exceeding 2,000 mcg/g — verified by third-party analytical testing.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Sourcing & Transparency Section -->
-  <section class="container pt-7xl pb-7xl">
-    <h2 class="h2 text-center mb-3xl">Radical Transparency</h2>
-    <p class="text-center mx-auto mb-3xl" style="max-width: 800px; font-size: 1.125rem; color: var(--color-dark-gray);">
-      We believe in our mushrooms and are proud to show you what's in every can.
-    </p>
+  <section class="section section-white">
+    <div class="container">
+      <h2 class="h2 text-center mb-3xl">Radical Transparency</h2>
+      <p class="text-center mx-auto mb-3xl" style="max-width: 800px; font-size: 1.125rem; color: var(--color-dark-gray);">
+        We believe in our mushrooms and are proud to show you what's in every can.
+      </p>
 
-    <div style="max-width: 600px; margin: 0 auto;">
-      <!-- COAs & Testing -->
-      <div class="card">
-        <div class="card-body text-center">
-          <h3 class="h4 mb-md">Certificates of Analysis</h3>
-          <p class="mb-lg" style="color: var(--color-dark-gray);">
+      <!-- COA block: text left, image right -->
+      <div class="content-block mb-3xl">
+        <div class="content-block__text bg-cream">
+          <h3 class="h3">Certificates of Analysis</h3>
+          <p>
             Every batch of mushrooms is tested for purity, potency, and active compounds. Want to see the lab results? They're available.
           </p>
-          <a href="docs/assets/ManeFocus%E2%84%A2%20Lion%27s%20Mane%20Spec%20Sheet.pdf" target="_blank" class="btn btn-outline btn-sm">View Testing Info</a>
+          <a href="docs/assets/ManeFocus%E2%84%A2%20Lion%27s%20Mane%20Spec%20Sheet.pdf" target="_blank" class="btn btn-outline">View Testing Info</a>
+        </div>
+        <div class="content-block__image placeholder">
+          <p>Lab testing / COA document photography</p>
         </div>
       </div>
-    </div>
 
-    <div class="text-center mt-3xl">
-      <div class="science-callout" style="max-width: 800px; margin: 0 auto;">
-        <h4 class="h4 mb-md">Certifications & Quality Standards</h4>
-        <p class="mb-md">
-          <strong>Monterey Nutra certifications:</strong> USDA National Organic Program certified, Kosher (KOF-K), PrimusGFS, vegan, non-GMO.
-        </p>
-        <p class="mb-md">
-          <strong>Cultivation:</strong> Master growers control humidity, oxygen, temperature, and harvest timing for peak potency. As they state: "We don't source our mushrooms; we grow them!"
-        </p>
-        <p class="mb-0">
-          <strong>Testing:</strong> Every batch tested for beta-glucans, triterpenes, erinacines, hericenones, hericenes, ergothioneine, heavy metals, and microbiological parameters.
-        </p>
+      <!-- Certifications block: image left, text right -->
+      <div class="content-block reverse">
+        <div class="content-block__image placeholder">
+          <p>Mushroom cultivation / quality control</p>
+        </div>
+        <div class="content-block__text">
+          <h3 class="h3">Certifications & Quality Standards</h3>
+          <p>
+            <strong>Monterey Nutra certifications:</strong> USDA National Organic Program certified, Kosher (KOF-K), PrimusGFS, vegan, non-GMO.
+          </p>
+          <p>
+            <strong>Cultivation:</strong> Master growers control humidity, oxygen, temperature, and harvest timing for peak potency. As they state: "We don't source our mushrooms; we grow them!"
+          </p>
+          <p>
+            <strong>Testing:</strong> Every batch tested for beta-glucans, triterpenes, erinacines, hericenones, hericenes, ergothioneine, heavy metals, and microbiological parameters.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <section class="bg-gradient-mint pt-5xl pb-5xl text-center">
-    <div class="container">
-      <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-lg" style="font-family: 'TAY Birdie', cursive; background-color: #2C4161; border-color: #2C4161;">Nourish Your Journey</a>
+  <!-- Community CTA Section -->
+  <section class="section section-light">
+    <div class="container text-center">
+      <h2 class="h2 mb-lg">Join the Wander State Community</h2>
+      <p style="font-size: 1.25rem; color: var(--color-medium-gray); max-width: 800px; margin: 0 auto 2rem;">
+        Be the first to know when we launch. Get exclusive updates and early access.
+      </p>
+      <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-xl" style="font-family: 'TAY Birdie', cursive;">Nourish Your Journey</a>
     </div>
   </section>
 
@@ -523,31 +717,40 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <!-- Navigation -->
+        <!-- Our Products -->
         <div>
-          <h4 class="footer-section-title">Explore</h4>
-          <a href="beverages.html" class="footer-link">Beverages</a>
-          <a href="mushroom-science.html" class="footer-link">The Science</a>
-          <a href="partners.html" class="footer-link">Partners</a>
+          <h4 class="footer-section-title">Our Products</h4>
+          <a href="beverages.html" class="footer-link">All Beverages</a>
+          <a href="beverages.html#lemon-mint" class="footer-link">Lemon & Mint</a>
+          <a href="beverages.html#chamomile-blackberry" class="footer-link">Chamomile & Blackberry</a>
+          <a href="beverages.html#yuzu-cucumber" class="footer-link">Yuzu & Cucumber</a>
+        </div>
+
+        <!-- Learn -->
+        <div>
+          <h4 class="footer-section-title">Learn</h4>
+          <a href="mushroom-science.html" class="footer-link">Mushroom Science</a>
+          <a href="partners.html" class="footer-link">Our Story</a>
+          <a href="beverages.html#ingredients" class="footer-link">Ingredients</a>
+          <a href="faq.html" class="footer-link">FAQ</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+
+        <!-- Community -->
+        <div>
+          <h4 class="footer-section-title">Community</h4>
           <a href="where-we-wander.html" class="footer-link">Where We Wander</a>
-        </div>
-
-        <!-- Company -->
-        <div>
-          <h4 class="footer-section-title">Company</h4>
-          <a href="index.html#about" class="footer-link">Our Story</a>
-          <a href="#contact" class="footer-link">Contact</a>
-          <a href="#wholesale" class="footer-link">Wholesale</a>
-          <a href="#blog" class="footer-link">Blog</a>
-        </div>
-
-        <!-- Connect -->
-        <div>
-          <h4 class="footer-section-title">Stay Connected</h4>
+          <a href="partners.html" class="footer-link">Partners</a>
           <a href="#" class="footer-link">Instagram</a>
-          <a href="#" class="footer-link">Twitter</a>
-          <a href="#" class="footer-link">Newsletter</a>
-          <a href="#faq" class="footer-link">FAQ</a>
+          <a href="#" onclick="openModal(); return false;" class="footer-link">Newsletter</a>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="footer-section-title">Legal</h4>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+          <a href="shipping-returns.html" class="footer-link">Shipping & Returns</a>
         </div>
       </div>
 
@@ -590,22 +793,26 @@
 
   <script src="script.js"></script>
   <script>
-    // Hamburger Menu Toggle
-    function toggleMenu() {
-      const hamburger = document.querySelector('.hamburger-menu');
-      const menuOverlay = document.querySelector('.menu-overlay');
-      const backdrop = document.querySelector('.menu-backdrop');
+    function toggleMobileMenu() {
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      const overlay = document.querySelector('.mobile-nav-overlay');
+      const backdrop = document.querySelector('.mobile-nav-backdrop');
 
-      hamburger.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
+      toggle.classList.toggle('active');
+      overlay.classList.toggle('active');
       backdrop.classList.toggle('active');
 
-      // Prevent body scroll when menu is open
-      if (menuOverlay.classList.contains('active')) {
+      if (overlay.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
       } else {
         document.body.style.overflow = 'auto';
       }
+    }
+
+    function toggleMobileDropdown(event, id) {
+      event.preventDefault();
+      const dropdown = document.getElementById('mobile-' + id);
+      dropdown.classList.toggle('active');
     }
 
     function openModal() {
@@ -618,17 +825,23 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Close modal when clicking outside
     document.getElementById('preReleaseModal').addEventListener('click', function(e) {
       if (e.target === this) {
         closeModal();
       }
     });
 
-    // Close modal on ESC key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeModal();
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('submitted') === 'true') {
+        alert('Thanks for joining the waitlist! Check your email for confirmation.');
+        window.history.replaceState({}, document.title, window.location.pathname);
       }
     });
   </script>

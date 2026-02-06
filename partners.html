@@ -3,217 +3,351 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet the friends and partners who make WANDER STATE possible. Monterey Nutra, Forest Farmers, and Washington Trails Association.">
+  <meta name="description" content="Meet the friends and partners who make WANDER STATE possible. Monterey Nutra, Forest Farmers, and Outdoor Alliance.">
   <title>Friends & Partners | WANDER STATE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="docs/assets/Brand Assets/Logos/Wander State/png/WS_Icon.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drinkwanderstate.com/partners.html">
+  <meta property="og:title" content="Friends & Partners | WANDER STATE">
+  <meta property="og:description" content="Meet the friends and partners who make WANDER STATE possible. Monterey Nutra, Forest Farmers, and Outdoor Alliance.">
+  <meta property="og:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Friends & Partners | WANDER STATE">
+  <meta name="twitter:description" content="Meet the friends and partners who make WANDER STATE possible. Monterey Nutra, Forest Farmers, and Outdoor Alliance.">
+  <meta name="twitter:image" content="https://drinkwanderstate.com/docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="olipop_meets_lacroix_styleguide.css">
   <style>
-    /* Mobile Optimizations */
-    @media (max-width: 767px) {
-      .mobile-logo {
-        height: 100px !important;
-      }
-
-      .mobile-hide-tagline {
-        display: none !important;
-      }
-
-      .mobile-nav {
-        margin-bottom: 0.5rem !important;
-        border-radius: 0 !important;
-      }
-
-      .mobile-hero-heading {
-        font-size: 2.5rem !important;
-      }
-
-      .grid-cols-3 {
-        grid-template-columns: 1fr !important;
-      }
-
-      .grid-cols-2 {
-        grid-template-columns: 1fr !important;
-      }
-
-      .grid-cols-4 {
-        grid-template-columns: 1fr !important;
-      }
-
-      /* Reduce all excessive spacing on mobile */
-      .pt-7xl {
-        padding-top: 2rem !important;
-      }
-
-      .pb-7xl {
-        padding-bottom: 2rem !important;
-      }
-
-      .pt-5xl {
-        padding-top: 1.5rem !important;
-      }
-
-      .pb-5xl {
-        padding-bottom: 1.5rem !important;
-      }
-
-      .mb-3xl {
-        margin-bottom: 1.5rem !important;
-      }
-
-      .pt-3xl {
-        padding-top: 1.5rem !important;
-      }
-
-      .pb-3xl {
-        padding-bottom: 1.5rem !important;
-      }
-
-      .pt-2xl {
-        padding-top: 1rem !important;
-      }
-
-      .pb-2xl {
-        padding-bottom: 1rem !important;
-      }
-
-      /* Make all backgrounds transparent or semi-transparent on mobile to show mountain background */
-      html {
-        height: 100%;
-        min-height: 100vh !important;
-      }
-
-      body {
-        background-image: url('docs/assets/Brand Assets/Color Palettes/mountain background png.png') !important;
-        background-size: auto 2000px !important;
-        background-position: center top !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
-        min-height: 100vh !important;
-        height: auto !important;
-      }
-
-      /* Restore normal nav on mobile */
-      .nav {
-        background: linear-gradient(to bottom, #FBF9F5 0%, #FFFFFF 100%) !important;
-      }
-
-      /* Make all sections transparent or semi-transparent */
-      section {
-        background: transparent !important;
-      }
-
-      /* For sections that need some background, make them semi-transparent */
-      .bg-cream,
-      .bg-gradient-mint,
-      .bg-gradient-earth,
-      .bg-gradient-sunset,
-      .bg-gradient-forest {
-        background: rgba(250, 248, 245, 0.25) !important;
-      }
+    body {
+      background: var(--color-cream);
+      margin: 0;
+      padding: 0;
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
-      .mobile-logo {
-        height: 120px !important;
-      }
+    /* Sticky Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
     }
 
-    /* Desktop Background */
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding-left: var(--container-padding-mobile);
+      padding-right: var(--container-padding-mobile);
+    }
+
     @media (min-width: 768px) {
-      body {
-        background-image: url('docs/assets/Brand Assets/Color Palettes/mountain background png.png');
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
+      .main-nav {
+        padding-left: var(--container-padding-desktop);
+        padding-right: var(--container-padding-desktop);
       }
     }
 
-    /* Hamburger Menu Styles */
-    .hamburger-menu {
+    .nav-logo-container {
+      flex-shrink: 0;
+    }
+
+    .nav-logo {
+      height: 60px;
+      width: auto;
+    }
+
+    @media (min-width: 768px) {
+      .nav-logo {
+        height: 80px;
+      }
+    }
+
+    /* Desktop Navigation */
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-menu {
+        display: flex;
+      }
+    }
+
+    .nav-menu > li {
+      position: relative;
+      margin: 0;
+    }
+
+    .nav-menu > li > a {
+      font-family: var(--font-family-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-forest);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      display: block;
+      transition: all var(--transition-base);
+      position: relative;
+    }
+
+    .nav-menu > li > a::after {
+      content: '';
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color var(--transition-base);
+    }
+
+    .nav-menu > li > a:hover {
+      color: var(--color-secondary-coral);
+    }
+
+    .nav-menu > li > a:hover::after {
+      background-color: var(--color-secondary-coral);
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: -1rem;
+      background: white;
+      min-width: 220px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      padding: 1rem 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all var(--transition-base);
+      list-style: none;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .nav-menu > li:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: var(--color-dark-gray);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all var(--transition-fast);
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--color-cream);
+      color: var(--color-primary-forest);
+      padding-left: 2rem;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
       display: flex;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
       padding: 10px;
+      background: none;
+      border: none;
       z-index: 1001;
     }
 
-    .hamburger-menu span {
+    @media (min-width: 1024px) {
+      .mobile-menu-toggle {
+        display: none;
+      }
+    }
+
+    .mobile-menu-toggle span {
       width: 25px;
       height: 3px;
-      background-color: #2C4161;
+      background-color: var(--color-primary-forest);
       border-radius: 2px;
       transition: all 0.3s ease;
     }
 
-    .hamburger-menu.active span:nth-child(1) {
+    .mobile-menu-toggle.active span:nth-child(1) {
       transform: rotate(45deg) translate(8px, 8px);
     }
 
-    .hamburger-menu.active span:nth-child(2) {
+    .mobile-menu-toggle.active span:nth-child(2) {
       opacity: 0;
     }
 
-    .hamburger-menu.active span:nth-child(3) {
+    .mobile-menu-toggle.active span:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .menu-overlay {
+    .mobile-nav-overlay {
       position: fixed;
       top: 0;
       right: -100%;
-      width: 300px;
+      width: 320px;
+      max-width: 85vw;
       height: 100vh;
-      background: linear-gradient(to bottom, #FBF9F5 0%, #FFFFFF 100%);
-      box-shadow: -2px 0 12px rgba(47, 79, 63, 0.15);
+      background: white;
+      box-shadow: -2px 0 20px rgba(0, 0, 0, 0.15);
       transition: right 0.3s ease;
       z-index: 1000;
-      padding: 80px 2rem 2rem;
+      padding: 100px 2rem 2rem;
+      overflow-y: auto;
     }
 
-    .menu-overlay.active {
+    .mobile-nav-overlay.active {
       right: 0;
     }
 
-    .menu-overlay nav {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    .mobile-nav-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .menu-overlay a {
-      color: #2C4161;
-      text-decoration: none;
+    .mobile-nav-menu > li {
+      margin-bottom: 1rem;
+    }
+
+    .mobile-nav-menu > li > a {
       font-size: 1.25rem;
-      font-weight: 400;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(44, 65, 97, 0.1);
-      transition: color 0.2s ease;
-    }
-
-    .menu-overlay a:hover {
+      font-weight: 600;
       color: var(--color-primary-forest);
+      text-decoration: none;
+      display: block;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-light-gray);
     }
 
-    .menu-backdrop {
+    .mobile-dropdown {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      list-style: none;
+      display: none;
+    }
+
+    .mobile-dropdown.active {
+      display: block;
+    }
+
+    .mobile-dropdown a {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--color-dark-gray);
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav-backdrop {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.4);
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
       z-index: 999;
     }
 
-    .menu-backdrop.active {
+    .mobile-nav-backdrop.active {
       opacity: 1;
       visibility: visible;
+    }
+
+    /* Page Header — Dark Navy */
+    .page-header {
+      position: relative;
+      background: var(--color-primary-forest);
+      padding: 5rem 0 4rem;
+      text-align: center;
+      color: white;
+    }
+
+    .page-header .image-placeholder-note {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.875rem;
+      font-style: italic;
+      margin-top: 1.5rem;
+    }
+
+    .page-title {
+      font-family: 'Thirsty Rough', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    @media (min-width: 768px) {
+      .page-title {
+        font-size: 4rem;
+      }
+    }
+
+    .page-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 7rem 0;
+    }
+
+    @media (max-width: 767px) {
+      .section {
+        padding: 4rem 0;
+      }
+    }
+
+    .section-light {
+      background: var(--color-cream);
+    }
+
+    .section-white {
+      background: white;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-primary-forest);
+      color: var(--color-cream);
+      padding: var(--space-4xl) 0 var(--space-xl);
+      margin-top: 0;
     }
 
     /* Partner Card Styles */
@@ -240,72 +374,117 @@
       border: 2px solid var(--color-light-gray);
     }
 
-    .story-card {
-      background: linear-gradient(135deg, var(--color-cream) 0%, #FFFFFF 100%);
-      border-left: 4px solid var(--color-primary-forest);
-      padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-    }
+    /* story-card removed — replaced by content-block panels */
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav container mobile-nav" style="padding-top: 1.5rem; padding-bottom: 1.5rem; background: linear-gradient(to bottom, #FBF9F5 0%, #FFFFFF 100%); margin-bottom: 0.75rem; border-radius: 0 0 16px 16px; box-shadow: 0 2px 12px rgba(47, 79, 63, 0.04);">
-    <div style="flex: 1;">
-      <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 1.5rem;">
-        <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="mobile-logo" style="height: 160px; width: auto;">
-        <div style="font-family: 'Thirsty Rough', serif; font-size: 1.5rem; color: #2C4161; line-height: 1.2;">
-          Functional Sparkling Teas
-        </div>
-      </a>
-    </div>
-    <div class="nav hide-mobile">
-      <a href="beverages.html" class="nav-link">Beverages</a>
-      <a href="mushroom-science.html" class="nav-link" style="text-align: center; line-height: 1.2;">Mushroom<br>Science</a>
-      <a href="where-we-wander.html" class="nav-link" style="text-align: center; line-height: 1.2;">Where We<br>Wander</a>
-      <a href="partners.html" class="nav-link active" style="text-align: center; line-height: 1.2;">Friends &<br>Partners</a>
-    </div>
-    <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-sm hide-mobile">Join Waitlist</a>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="nav-logo-container">
+        <a href="index.html">
+          <img src="docs/assets/Brand Assets/Logos/Wander State/png/WS_Wordmark-with-Star.png" alt="Wander State Logo" class="nav-logo">
+        </a>
+      </div>
 
-  <!-- Menu Backdrop -->
-  <div class="menu-backdrop" onclick="toggleMenu()"></div>
+      <ul class="nav-menu">
+        <li>
+          <a href="#products">Our Products</a>
+          <ul class="dropdown-menu">
+            <li><a href="beverages.html">All Beverages</a></li>
+            <li><a href="beverages.html#lemon-mint">Lemon & Mint</a></li>
+            <li><a href="beverages.html#chamomile-blackberry">Chamomile & Blackberry</a></li>
+            <li><a href="beverages.html#yuzu-cucumber">Yuzu & Cucumber</a></li>
+            <li><a href="beverages.html#hibiscus-orange">Hibiscus & Blood Orange</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="mushroom-science.html">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a href="mushroom-science.html">Mushroom Science</a></li>
+            <li><a href="mushroom-science.html#why-mushrooms">Health Benefits</a></li>
+            <li><a href="partners.html">Our Story</a></li>
+            <li><a href="beverages.html#ingredients">Ingredients</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="where-we-wander.html">Community</a>
+          <ul class="dropdown-menu">
+            <li><a href="where-we-wander.html">Where We Wander</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="#outdoor-alliance">Outdoor Alliance</a></li>
+            <li><a href="#" onclick="openModal(); return false;">Join Our Community</a></li>
+          </ul>
+        </li>
+      </ul>
 
-  <!-- Menu Overlay -->
-  <div class="menu-overlay">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="beverages.html">Beverages</a>
-      <a href="mushroom-science.html">Mushroom Science</a>
-      <a href="where-we-wander.html">Where We Wander</a>
-      <a href="partners.html">Friends & Partners</a>
-      <a href="#" onclick="openModal(); return false;" style="border: 2px solid #2C4161; text-align: center; border-radius: 8px; padding: 0.75rem 1.5rem;">Join Waitlist</a>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav-backdrop" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-nav-overlay">
+    <ul class="mobile-nav-menu">
+      <li>
+        <a href="#products" onclick="toggleMobileDropdown(event, 'products')">Our Products</a>
+        <ul class="mobile-dropdown" id="mobile-products">
+          <li><a href="beverages.html">All Beverages</a></li>
+          <li><a href="beverages.html#lemon-mint">Lemon & Mint</a></li>
+          <li><a href="beverages.html#chamomile-blackberry">Chamomile & Blackberry</a></li>
+          <li><a href="beverages.html#yuzu-cucumber">Yuzu & Cucumber</a></li>
+          <li><a href="beverages.html#hibiscus-orange">Hibiscus & Blood Orange</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="mushroom-science.html" onclick="toggleMobileDropdown(event, 'learn')">Learn</a>
+        <ul class="mobile-dropdown" id="mobile-learn">
+          <li><a href="mushroom-science.html">Mushroom Science</a></li>
+          <li><a href="mushroom-science.html#why-mushrooms">Health Benefits</a></li>
+          <li><a href="partners.html">Our Story</a></li>
+          <li><a href="beverages.html#ingredients">Ingredients</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="where-we-wander.html" onclick="toggleMobileDropdown(event, 'community')">Community</a>
+        <ul class="mobile-dropdown" id="mobile-community">
+          <li><a href="where-we-wander.html">Where We Wander</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="#outdoor-alliance">Outdoor Alliance</a></li>
+          <li><a href="#" onclick="openModal(); return false;">Join Our Community</a></li>
+        </ul>
+      </li>
+      <li style="margin-top: 2rem;">
+        <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-block">Join Waitlist</a>
+      </li>
+    </ul>
   </div>
 
-  <!-- Hero Section -->
-  <section class="container text-center pt-7xl pb-7xl">
-    <h1 class="h1 mb-lg mobile-hero-heading">Guardians of the Good Stuff</h1>
-    <p class="lead mx-auto" style="max-width: 900px;">
-      We proudly partner with the people who keep forests healthy, mushrooms thriving, and wild spaces protected. More than just suppliers and partners - they're stewards of the ingredients and landscapes that inspire Wander State.
-    </p>
+  <!-- Page Header — Dark Navy -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Guardians of the Good Stuff</h1>
+      <p class="page-subtitle">
+        We proudly partner with the people who keep forests healthy, mushrooms thriving, and wild spaces protected. More than just suppliers and partners - they're stewards of the ingredients and landscapes that inspire Wander State.
+      </p>
+      <p class="image-placeholder-note">[ Nature / forest landscape image placeholder ]</p>
+    </div>
   </section>
 
   <!-- Partner Cards Section -->
-  <section class="container pb-7xl">
+  <section class="section section-white">
+    <div class="container">
     <div class="grid grid-cols-3 gap-2xl">
       <!-- Monterey Nutra / Amir Karian -->
       <div class="card partner-card">
         <div class="card-body">
           <div class="partner-logo-container" style="padding: 0; overflow: hidden;">
-            <img src="https://www.montereynutra.com/hs-fs/hubfs/Nutraceuticals%202024/About%20Us-Our%20Story/nutra-functional-mushrooms-about-us-amir-karian-general-manager.jpg?width=558&height=314&name=nutra-functional-mushrooms-about-us-amir-karian-general-manager.jpg" alt="Amir Karian, Founder of Monterey Nutra" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="https://www.montereynutra.com/hs-fs/hubfs/Nutraceuticals%202024/About%20Us-Our%20Story/nutra-functional-mushrooms-about-us-amir-karian-general-manager.jpg?width=558&height=314&name=nutra-functional-mushrooms-about-us-amir-karian-general-manager.jpg" alt="Amir Karian, Founder of Monterey Nutra" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <h3 class="h4 mb-md text-center">Monterey Nutra</h3>
           <p class="text-center mb-md" style="color: var(--color-primary-forest); font-weight: 600;">Amir Karian, Founder</p>
@@ -321,7 +500,7 @@
       <div class="card partner-card">
         <div class="card-body">
           <div class="partner-logo-container" style="padding: 0; overflow: hidden;">
-            <img src="https://theforestfarmers.com/_next/image?url=%2Fteam-mike.webp&w=1920&q=75" alt="Mike Farrell, Founder of Forest Farmers" style="width: 100%; height: 100%; object-fit: contain;">
+            <img src="https://theforestfarmers.com/_next/image?url=%2Fteam-mike.webp&w=1920&q=75" alt="Mike Farrell, Founder of Forest Farmers" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
           </div>
           <h3 class="h4 mb-md text-center">Forest Farmers</h3>
           <p class="text-center mb-md" style="color: var(--color-primary-forest); font-weight: 600;">Mike Farrell, Founder</p>
@@ -336,10 +515,10 @@
       </div>
 
       <!-- Outdoor Alliance -->
-      <div class="card partner-card">
+      <div id="outdoor-alliance" class="card partner-card">
         <div class="card-body">
           <div class="partner-logo-container" style="padding: 0.5rem;">
-            <img src="docs/assets/outdoor alliance image.png" alt="Outdoor Alliance Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            <img src="docs/assets/outdoor alliance image.png" alt="Outdoor Alliance Logo" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
           </div>
           <h3 class="h4 mb-md text-center">Outdoor Alliance</h3>
           <p class="text-center mb-md" style="color: var(--color-primary-forest); font-weight: 600;">Uniting Outdoor Communities</p>
@@ -353,10 +532,11 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Stories & Contribution Section -->
-  <section class="bg-cream pt-7xl pb-7xl">
+  <section class="section section-light">
     <div class="container">
       <h2 class="h2 text-center mb-3xl">The Philosophy Behind the Partnerships</h2>
       <p class="text-center mx-auto mb-3xl" style="max-width: 800px; font-size: 1.125rem; color: var(--color-dark-gray);">
@@ -366,84 +546,71 @@
         Every time you enjoy Wander State — on a hike, at a party, reading a book, or in everyday motion — you're tapping into a network of people and places built around care.
       </p>
 
-      <!-- Amir's Story -->
-      <div class="story-card">
-        <div class="grid grid-cols-2 gap-xl items-center">
-          <div>
-            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--color-secondary-mint) 20%, var(--color-primary-mushroom) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 2rem;">
-              <img src="docs/assets/monterey%20mushrooms%20image%202.jpeg" alt="Monterey Nutra Mushroom Cultivation" style="max-width: 80%; max-height: 80%; object-fit: contain;">
-            </div>
-          </div>
-          <div>
-            <h3 class="h3 mb-md">Mushrooms, Sustainably Grown</h3>
-            <p class="mb-md" style="font-size: 1.125rem; line-height: 1.75;">
-              <strong>Monterey Nutra</strong> grows functional mushrooms with an unwavering commitment to sustainability — from solar-powered farms to renewable substrates that divert waste from landfills.
-            </p>
-            <p style="color: var(--color-dark-gray);">
-              Their mushrooms grow on renewable compost, hardwood sawdust, and organic sorghum, using minimal water and locally sourced materials to reduce food miles. Solar-powered facilities keep energy use low. After harvest, "spent" substrate becomes nutrient-rich soil amendment for farms and landscaping. Every batch is third-party tested, and every step honors both scientific rigor and environmental responsibility.
-            </p>
-            <p style="color: var(--color-dark-gray); margin-top: 1rem;">
-              Their mushrooms bring the goodness — we keep it crisp and refreshing.
-            </p>
-            <a href="https://www.montereynutra.com/our-story" target="_blank" class="btn btn-primary mt-lg">Explore More</a>
-          </div>
+      <!-- Monterey Nutra Story -->
+      <div class="content-block">
+        <div class="content-block__image" style="background: linear-gradient(135deg, var(--color-secondary-mint) 20%, var(--color-primary-mushroom) 100%); padding: 2rem;">
+          <img src="docs/assets/monterey%20mushrooms%20image%202.jpeg" alt="Monterey Nutra Mushroom Cultivation" loading="lazy" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+        </div>
+        <div class="content-block__text">
+          <h3 class="h3">Mushrooms, Sustainably Grown</h3>
+          <p>
+            <strong>Monterey Nutra</strong> grows functional mushrooms with an unwavering commitment to sustainability — from solar-powered farms to renewable substrates that divert waste from landfills.
+          </p>
+          <p>
+            Their mushrooms grow on renewable compost, hardwood sawdust, and organic sorghum, using minimal water and locally sourced materials to reduce food miles. Solar-powered facilities keep energy use low. After harvest, "spent" substrate becomes nutrient-rich soil amendment for farms and landscaping.
+          </p>
+          <p>Their mushrooms bring the goodness — we keep it crisp and refreshing.</p>
+          <a href="https://www.montereynutra.com/our-story" target="_blank" class="btn btn-primary" style="align-self: flex-start;">Explore More</a>
         </div>
       </div>
 
-      <!-- Mike's Story -->
-      <div class="story-card">
-        <div class="grid grid-cols-2 gap-xl items-center">
-          <div>
-            <h3 class="h3 mb-md">Maple Water From Thriving Forests</h3>
-            <p class="mb-md" style="font-size: 1.125rem; line-height: 1.75;">
-              <strong>Forest Farmers</strong> sustainably harvests the essence of New York and Vermont's diverse forests — over 9,000 acres in the Adirondack and Green Mountains that are home to some of the most beautiful and productive forests in the world.
-            </p>
-            <p style="color: var(--color-dark-gray);">
-              Their approach focuses on maintaining diverse forests with a wide variety of tree species, not just maples. This biodiversity creates healthier ecosystems and more supportive habitats for wild inhabitants. The forests produce certified organic saps, syrups, and sugar, while also providing foraging opportunities for wild leeks, fiddleheads, berries, and mushrooms. It's forest farming that honors the land's natural diversity.
-            </p>
-            <p style="color: var(--color-dark-gray); margin-top: 1rem;">
-              When your sweetener comes straight from the forest, you don't need much else.
-            </p>
-            <a href="https://www.theforestfarmers.com/about" target="_blank" class="btn btn-primary mt-lg">Explore More</a>
-          </div>
-          <div>
-            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--color-primary-moss) 20%, var(--color-primary-forest) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 2rem;">
-              <img src="docs/assets/Forest%20Farmers%20Image.png" alt="Forest Farmers Maple Water" style="max-width: 80%; max-height: 80%; object-fit: contain;">
-            </div>
-          </div>
+      <!-- Forest Farmers Story -->
+      <div class="content-block reverse">
+        <div class="content-block__image" style="background: linear-gradient(135deg, var(--color-primary-moss) 20%, var(--color-primary-forest) 100%); padding: 2rem;">
+          <img src="docs/assets/Forest%20Farmers%20Image.png" alt="Forest Farmers Maple Water" loading="lazy" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+        </div>
+        <div class="content-block__text bg-cream">
+          <h3 class="h3">Maple Water From Thriving Forests</h3>
+          <p>
+            <strong>Forest Farmers</strong> sustainably harvests the essence of New York and Vermont's diverse forests — over 9,000 acres in the Adirondack and Green Mountains that are home to some of the most beautiful and productive forests in the world.
+          </p>
+          <p>
+            Their approach focuses on maintaining diverse forests with a wide variety of tree species, not just maples. This biodiversity creates healthier ecosystems and more supportive habitats for wild inhabitants.
+          </p>
+          <p>When your sweetener comes straight from the forest, you don't need much else.</p>
+          <a href="https://www.theforestfarmers.com/about" target="_blank" class="btn btn-primary" style="align-self: flex-start;">Explore More</a>
         </div>
       </div>
 
       <!-- Outdoor Alliance Story -->
-      <div class="story-card">
-        <div class="grid grid-cols-2 gap-xl items-center">
-          <div>
-            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--color-secondary-sky) 20%, var(--color-primary-forest) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 2rem;">
-              <img src="docs/assets/outdoor alliance image.png" alt="Outdoor Alliance Logo" style="max-width: 80%; max-height: 80%; object-fit: contain;">
-            </div>
-          </div>
-          <div>
-            <h3 class="h3 mb-md">Protecting Access to Wild Experiences</h3>
-            <p class="mb-md" style="font-size: 1.125rem; line-height: 1.75;">
-              <strong>Outdoor Alliance</strong> unites climbers, hikers, paddlers, mountain bikers, and backcountry skiers to conserve public lands and protect human-powered outdoor recreation.
-            </p>
-            <p style="color: var(--color-dark-gray);">
-              Through grassroots advocacy and policy work, they've protected 40 million acres and secured $5.1 billion in funding for public lands and waters. With 100,000+ outdoor enthusiasts mobilized nationwide, they defend the trails, peaks, rivers, and coastlines where we recharge and reconnect. From fighting for the Land and Water Conservation Fund to advocating for climate-smart land management, they ensure future generations can wander freely.
-            </p>
-            <p style="color: var(--color-dark-gray); margin-top: 1rem;">
-              They protect the access; we fuel the adventure.
-            </p>
-            <a href="https://www.outdooralliance.org/get-involved/" target="_blank" class="btn btn-primary mt-lg">Get Involved</a>
-          </div>
+      <div class="content-block">
+        <div class="content-block__image" style="background: linear-gradient(135deg, var(--color-secondary-sky) 20%, var(--color-primary-forest) 100%); padding: 2rem;">
+          <img src="docs/assets/outdoor alliance image.png" alt="Outdoor Alliance Logo" loading="lazy" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+        </div>
+        <div class="content-block__text">
+          <h3 class="h3">Protecting Access to Wild Experiences</h3>
+          <p>
+            <strong>Outdoor Alliance</strong> unites climbers, hikers, paddlers, mountain bikers, and backcountry skiers to conserve public lands and protect human-powered outdoor recreation.
+          </p>
+          <p>
+            Through grassroots advocacy and policy work, they've protected 40 million acres and secured $5.1 billion in funding for public lands and waters. With 100,000+ outdoor enthusiasts mobilized nationwide, they defend the trails, peaks, rivers, and coastlines where we recharge and reconnect.
+          </p>
+          <p>They protect the access; we fuel the adventure.</p>
+          <a href="https://www.outdooralliance.org/get-involved/" target="_blank" class="btn btn-primary" style="align-self: flex-start;">Get Involved</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <section class="bg-gradient-mint pt-5xl pb-5xl text-center">
-    <div class="container">
-      <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-lg" style="font-family: 'TAY Birdie', cursive; background-color: #2C4161; border-color: #2C4161;">Nourish Your Journey</a>
+  <!-- Community CTA Section -->
+  <section class="section section-image" style="background: linear-gradient(135deg, #3D5A80, #2B4C6F);">
+    <div class="section-overlay" style="background: linear-gradient(135deg, rgba(43,76,111,0.9), rgba(30,58,95,0.8));"></div>
+    <div class="container text-center">
+      <h2 class="h2 mb-lg" style="color: white;">Join the Wander State Community</h2>
+      <p style="font-size: 1.25rem; color: rgba(255,255,255,0.85); max-width: 800px; margin: 0 auto 2rem;">
+        Be the first to know when we launch. Get exclusive updates and early access.
+      </p>
+      <a href="#" onclick="openModal(); return false;" class="btn btn-primary btn-xl" style="font-family: 'TAY Birdie', cursive;">Nourish Your Journey</a>
     </div>
   </section>
 
@@ -451,31 +618,40 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <!-- Navigation -->
+        <!-- Our Products -->
         <div>
-          <h4 class="footer-section-title">Explore</h4>
-          <a href="beverages.html" class="footer-link">Beverages</a>
-          <a href="mushroom-science.html" class="footer-link">The Science</a>
-          <a href="partners.html" class="footer-link">Partners</a>
+          <h4 class="footer-section-title">Our Products</h4>
+          <a href="beverages.html" class="footer-link">All Beverages</a>
+          <a href="beverages.html#lemon-mint" class="footer-link">Lemon & Mint</a>
+          <a href="beverages.html#chamomile-blackberry" class="footer-link">Chamomile & Blackberry</a>
+          <a href="beverages.html#yuzu-cucumber" class="footer-link">Yuzu & Cucumber</a>
+        </div>
+
+        <!-- Learn -->
+        <div>
+          <h4 class="footer-section-title">Learn</h4>
+          <a href="mushroom-science.html" class="footer-link">Mushroom Science</a>
+          <a href="partners.html" class="footer-link">Our Story</a>
+          <a href="beverages.html#ingredients" class="footer-link">Ingredients</a>
+          <a href="faq.html" class="footer-link">FAQ</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+
+        <!-- Community -->
+        <div>
+          <h4 class="footer-section-title">Community</h4>
           <a href="where-we-wander.html" class="footer-link">Where We Wander</a>
-        </div>
-
-        <!-- Company -->
-        <div>
-          <h4 class="footer-section-title">Company</h4>
-          <a href="index.html#about" class="footer-link">Our Story</a>
-          <a href="#contact" class="footer-link">Contact</a>
-          <a href="#wholesale" class="footer-link">Wholesale</a>
-          <a href="#blog" class="footer-link">Blog</a>
-        </div>
-
-        <!-- Connect -->
-        <div>
-          <h4 class="footer-section-title">Stay Connected</h4>
+          <a href="partners.html" class="footer-link">Partners</a>
           <a href="#" class="footer-link">Instagram</a>
-          <a href="#" class="footer-link">Twitter</a>
-          <a href="#" class="footer-link">Newsletter</a>
-          <a href="#faq" class="footer-link">FAQ</a>
+          <a href="#" onclick="openModal(); return false;" class="footer-link">Newsletter</a>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="footer-section-title">Legal</h4>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+          <a href="shipping-returns.html" class="footer-link">Shipping & Returns</a>
         </div>
       </div>
 
@@ -518,22 +694,26 @@
 
   <script src="script.js"></script>
   <script>
-    // Hamburger Menu Toggle
-    function toggleMenu() {
-      const hamburger = document.querySelector('.hamburger-menu');
-      const menuOverlay = document.querySelector('.menu-overlay');
-      const backdrop = document.querySelector('.menu-backdrop');
+    function toggleMobileMenu() {
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      const overlay = document.querySelector('.mobile-nav-overlay');
+      const backdrop = document.querySelector('.mobile-nav-backdrop');
 
-      hamburger.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
+      toggle.classList.toggle('active');
+      overlay.classList.toggle('active');
       backdrop.classList.toggle('active');
 
-      // Prevent body scroll when menu is open
-      if (menuOverlay.classList.contains('active')) {
+      if (overlay.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
       } else {
         document.body.style.overflow = 'auto';
       }
+    }
+
+    function toggleMobileDropdown(event, id) {
+      event.preventDefault();
+      const dropdown = document.getElementById('mobile-' + id);
+      dropdown.classList.toggle('active');
     }
 
     function openModal() {
@@ -546,17 +726,23 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Close modal when clicking outside
     document.getElementById('preReleaseModal').addEventListener('click', function(e) {
       if (e.target === this) {
         closeModal();
       }
     });
 
-    // Close modal on ESC key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeModal();
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('submitted') === 'true') {
+        alert('Thanks for joining the waitlist! Check your email for confirmation.');
+        window.history.replaceState({}, document.title, window.location.pathname);
       }
     });
   </script>
