@@ -37,8 +37,7 @@ These changes unlock everything else.
 
 ### 1.3 Write Founder Story
 - [ ] Finalize Tommy's story for the site
-- [ ] Get Eric's story when available
-- [ ] Write "How We Met" / origin narrative
+- [ ] Write origin narrative (solo founder perspective)
 
 ---
 
@@ -86,8 +85,7 @@ This page should be the emotional heart of the brand.
 
 ### 3.1 Founder Section
 - [ ] Tommy's full story (from docs)
-- [ ] Eric's story (when ready)
-- [ ] Warm, personal photos
+- [ ] Warm, personal photo
 - [ ] "How Wander State Began" narrative
 
 ### 3.2 Mushroom Partner Story (Monterey Nutra / Bulk Wholesale Mushrooms)
@@ -192,7 +190,6 @@ For each flavor:
 
 ### Assets to Gather
 - [ ] Tommy photo
-- [ ] Eric photo (when ready)
 - [ ] Amir photo (request from partner)
 - [ ] Mike Farrell photo (request from partner)
 - [ ] Lifestyle photography (outdoor, ritual moments)
